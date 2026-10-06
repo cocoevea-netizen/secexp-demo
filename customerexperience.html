@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>資安數智專家｜體驗與說明｜鼎新數智</title>
+
+<style>
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+.q5arch{margin:22px 0 0;padding-top:20px;border-top:1px dashed var(--line)}
+.q5arch img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:zoom-in}
+.q5arch figcaption{margin-top:8px;font-size:13px;color:var(--muted);text-align:center}
+.q5arch .q5arch-fb{display:none;color:var(--danger)}
+.q5arch.q5arch-err img{display:none}
+.q5arch.q5arch-err .q5arch-fb{display:inline}
+.q5arch.q5arch-err .q5arch-ok{display:none}
+@media print{.q5arch img{break-inside:avoid}}
+.cx-linkbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px;padding:14px 18px;border:1px solid var(--accent-line);border-left:5px solid var(--accent);border-radius:12px;background:var(--accent-soft);box-shadow:var(--shadow)}
+.cx-linkbar .cx-lb-ic{font-size:24px}
+.cx-linkbar .cx-lb-tx{flex:1;min-width:240px;display:flex;flex-direction:column;gap:3px}
+.cx-linkbar .cx-lb-tx b{font-size:15.5px;color:var(--accent)}
+.cx-linkbar .cx-lb-tx span{font-size:13px;color:var(--muted)}
+.cx-linkbar code{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:6px;padding:3px 8px;word-break:break-all;align-self:flex-start}
+.cx-linkbar .cx-lb-act{display:flex;gap:8px;flex-wrap:wrap}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<style id="agentDemoStyles">
+
+.agent-demo{margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.agent-demo-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:18px 20px 14px;border-bottom:1px solid var(--line-soft);background:linear-gradient(135deg,var(--accent-soft),var(--surface))}
+.agent-demo-head .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+.agent-demo-head h2{font-family:var(--serif);font-size:19px;margin-top:4px}
+.agent-demo-head p{font-size:13.5px;color:var(--muted);line-height:1.6;margin-top:5px;max-width:720px}
+.agent-demo-badge{flex:none;font-family:var(--mono);font-size:11.5px;color:var(--accent);background:#fff;border:1px solid var(--accent-line);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.agent-demo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 18px 18px}
+.agent-card{display:flex;flex-direction:column;aspect-ratio:1/1;min-height:0;border:1px solid var(--line);border-radius:11px;background:var(--surface);padding:12px;position:relative;transition:.16s;overflow:hidden}
+.agent-card:hover{transform:translateY(-2px);border-color:var(--accent-line);box-shadow:0 12px 28px -20px rgba(0,134,201,.5)}
+.agent-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.agent-card.custom::before{background:var(--warn)}
+.agent-card-top{display:flex;align-items:flex-start;gap:10px}
+.agent-avatar{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid var(--accent-line);font-size:20px;flex:none}
+.agent-card.custom .agent-avatar{background:var(--warn-soft);border-color:var(--warn-line)}
+.agent-card-title{min-width:0}
+.agent-card-title h3{font-size:15.5px;line-height:1.3}
+.agent-card-title .sub{font-size:11.5px;color:var(--faint);font-family:var(--mono);margin-top:2px}
+.agent-cap{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0 7px}
+.agent-cap span{font-size:10.8px;border-radius:999px;padding:2px 7px;background:var(--surface-2);border:1px solid var(--line-soft);color:var(--muted)}
+.agent-card-desc{font-size:12px;color:var(--muted);line-height:1.48;flex:1}
+.agent-card-foot{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid var(--line-soft)}
+.agent-card-foot small{font-size:10.8px;color:var(--faint)}
+.agent-try{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:7px;padding:6px 9px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.agent-try:hover{filter:brightness(1.06)}
+.agent-card.custom .agent-try{background:var(--warn);border-color:var(--warn)}
+.agent-demo-note{padding:10px 18px 14px;font-size:12.5px;color:var(--faint);line-height:1.55;border-top:1px dashed var(--line-soft)}
+.agent-demo-note b{color:var(--warn)}
+
+
+.start-notice{margin:0 0 24px;border:2.5px solid var(--danger-line);border-radius:14px;background:var(--surface);box-shadow:0 2px 3px rgba(208,40,31,.08),0 16px 34px -24px rgba(208,40,31,.45);overflow:hidden}
+.start-notice-hd{display:flex;align-items:center;gap:12px;padding:15px 18px;background:linear-gradient(90deg,var(--danger-soft),#fff7f6);border-bottom:2px solid var(--danger-line);font-size:18px;font-weight:900;color:var(--danger);letter-spacing:.02em}
+.start-notice-hd .tag{font-family:var(--mono);font-size:13px;letter-spacing:.18em;padding:5px 11px;border-radius:7px;background:#fff;color:var(--danger);border:2px solid var(--danger-line);box-shadow:inset 0 0 0 1px rgba(208,40,31,.04)}
+.start-notice-grid{display:grid;grid-template-columns:1.15fr 1.45fr 1fr}
+.start-notice-item{padding:15px 17px;border-right:1px solid var(--line-soft);min-width:0}
+.start-notice-item:last-child{border-right:0}
+.start-notice-item .k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent);margin-bottom:5px}
+.start-notice-item b{display:block;font-size:14.5px;line-height:1.45;margin-bottom:5px}
+.start-notice-item p{font-size:12.8px;color:var(--muted);line-height:1.65}
+.start-notice-item.danger{background:var(--surface)}
+.start-notice-item.danger .k,.start-notice-item.danger b{color:var(--danger)}
+.start-notice-item.danger b{font-size:15.5px;font-weight:900}
+.start-notice-item.danger p{color:#7d302b;font-weight:600}
+.start-notice-item.trial .k{color:var(--ok)}
+.start-notice-item.trial b{color:var(--ink)}
+.start-notice-item .hot{color:var(--danger);font-weight:800}
+
+
+#stageConfig:not(.wizard-first-page) #agentExperience{display:none!important}
+#stageResult #agentExperience{display:none!important}
+
+
+.agent-commonbar{margin:15px 18px 0;padding:11px 13px;border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:9px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.agent-commonbar b{font-size:13.5px;color:var(--accent);margin-right:2px}
+.agent-commonbar span{font-size:11.5px;border-radius:999px;padding:3px 9px;background:#fff;border:1px solid var(--accent-line);color:var(--ink);font-weight:700}
+.agent-common{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0 2px}
+.agent-common span{font-size:10.5px;border-radius:999px;padding:2px 7px;background:var(--ok-soft);border:1px solid var(--ok-line);color:var(--ok);font-weight:700}
+
+
+.agent-platform{margin:0 18px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);overflow:hidden}
+.agent-platform-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.agent-platform-hd h3{font-size:14.5px}
+.agent-platform-hd p{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:3px}
+.agent-platform-hd .plat-tag{font-family:var(--mono);font-size:10.5px;color:var(--accent);border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:999px;padding:3px 8px;white-space:nowrap}
+.agent-platform-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.agent-platform-item{padding:12px 13px;border-right:1px solid var(--line-soft);min-width:0}
+.agent-platform-item:last-child{border-right:0}
+.agent-platform-item .pi{font-size:19px;line-height:1;margin-bottom:7px;text-align:center}
+.agent-platform-item b{display:block;font-size:13px;margin-bottom:3px;text-align:center}
+.agent-platform-item p{font-size:11.8px;color:var(--muted);line-height:1.55}
+.agent-platform-item .model-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.agent-platform-item .model-tags span{font-size:9.8px;font-family:var(--mono);padding:2px 5px;border-radius:4px;background:#fff;border:1px solid var(--line);color:var(--muted)}
+
+
+.wizard-useguide{margin:0 0 18px}
+.wizard-useguide .useguide{margin:0;box-shadow:none}
+.experience-nav{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin:0 0 22px;padding:0 2px}
+.experience-nav .pagehint{margin-right:auto;font-size:12.5px;color:var(--faint);font-family:var(--mono)}
+.experience-nav .btn{min-width:190px}
+#stageConfig.experience-page #wizardBlk{display:none!important}
+#stageConfig:not(.experience-page) .start-notice,#stageConfig:not(.experience-page) #agentExperience,#stageConfig:not(.experience-page) #experienceNav{display:none!important}
+.agent-platform-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.agent-platform-item{border-bottom:1px solid var(--line-soft)}
+.agent-platform-item:nth-child(3n){border-right:0}
+.agent-platform-item:nth-last-child(-n+3){border-bottom:0}
+.agent-platform-item.security b{color:var(--ok)}
+.agent-platform-item.points b{color:var(--warn)}
+.agent-platform-note{padding:9px 13px;border-top:1px solid var(--line-soft);background:#fff;font-size:11.5px;color:var(--faint);line-height:1.55}
+
+@media(max-width:900px){.start-notice-grid{grid-template-columns:1fr}.start-notice-item{border-right:0;border-bottom:1px solid var(--line-soft)}.start-notice-item:last-child{border-bottom:0}.agent-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.agent-platform-item{border-right:1px solid var(--line-soft)!important;border-bottom:1px solid var(--line-soft)!important}.agent-platform-item:nth-child(2n){border-right:0!important}.agent-platform-item:nth-last-child(-n+2){border-bottom:0!important}}
+@media(max-width:680px){.agent-platform-grid{grid-template-columns:1fr}.agent-platform-item{border-right:0!important;border-bottom:1px solid var(--line-soft)}.agent-platform-item:last-child{border-bottom:0}}
+
+.agent-sim-mask{position:fixed;inset:0;z-index:410;background:rgba(12,38,69,.46);display:flex;align-items:center;justify-content:center;padding:18px}
+.agent-sim-mask[hidden]{display:none!important}
+.agent-sim{width:min(980px,100%);height:min(720px,92vh);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 28px 80px -28px rgba(12,38,69,.55);display:grid;grid-template-columns:250px minmax(0,1fr);overflow:hidden}
+.agent-sim-side{background:var(--surface-2);border-right:1px solid var(--line);padding:18px 15px;display:flex;flex-direction:column;min-width:0}
+.agent-sim-brand{display:flex;gap:9px;align-items:center;padding:0 2px 14px;border-bottom:1px solid var(--line)}
+.agent-sim-brand .mark{font-family:var(--mono);font-size:10.5px;background:var(--accent);color:#fff;border-radius:5px;padding:3px 6px;letter-spacing:.08em}
+.agent-sim-brand b{font-size:14.5px}
+.agent-sim-who{padding:15px 2px 12px}
+.agent-sim-who .av{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#fff;border:1px solid var(--line);font-size:22px;margin-bottom:9px}
+.agent-sim-who h3{font-size:16px}
+.agent-sim-who p{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:5px}
+.agent-sim-skilltitle{font-size:10.5px;font-family:var(--mono);color:var(--faint);letter-spacing:.1em;margin:8px 0 7px}
+.agent-sim-skills{display:flex;flex-direction:column;gap:6px}
+.agent-sim-skills span{font-size:12px;padding:7px 8px;border-radius:7px;background:#fff;border:1px solid var(--line-soft);color:var(--muted)}
+.agent-sim-sidefoot{margin-top:auto;font-size:11.5px;color:var(--faint);line-height:1.55;padding-top:14px}
+.agent-sim-main{display:grid;grid-template-rows:auto 1fr auto;width:100%;max-width:100%;min-width:0;min-height:0;overflow:hidden}
+.agent-sim-top{display:flex;align-items:center;gap:10px;width:100%;max-width:100%;min-width:0;padding:12px 15px;border-bottom:1px solid var(--line);background:#fff}
+.agent-sim-top b{font-size:14.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.agent-sim-top .live{font-size:11px;color:var(--ok);background:var(--ok-soft);border:1px solid var(--ok-line);border-radius:999px;padding:2px 7px}
+.agent-sim-top .demo{font-size:11px;color:var(--warn);background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:999px;padding:2px 7px}
+.agent-sim-top .spacer{margin-left:auto}
+.agent-sim-iconbtn{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:7px;padding:6px 9px;cursor:pointer;font-size:13px;white-space:nowrap}
+.agent-chat{overflow:auto;padding:18px 18px 10px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);scroll-behavior:smooth}
+.msg{display:flex;gap:9px;margin:0 0 14px;max-width:88%}
+.msg.user{margin-left:auto;flex-direction:row-reverse}
+.msg .mav{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid var(--accent-line);font-size:14px;flex:none}
+.msg.user .mav{background:var(--surface-3);border-color:var(--line)}
+.msg .bubble{border:1px solid var(--line);background:#fff;border-radius:10px 10px 10px 3px;padding:10px 12px;font-size:13.5px;line-height:1.62;min-width:0;box-shadow:0 4px 18px -16px rgba(12,38,69,.5)}
+.msg.user .bubble{background:var(--accent);color:#fff;border-color:var(--accent);border-radius:10px 10px 3px 10px}
+.msg .bubble b{font-weight:800}
+.msg .bubble .mini{display:block;color:var(--faint);font-family:var(--mono);font-size:10.5px;margin-top:7px}
+.msg.user .bubble .mini{color:rgba(255,255,255,.74)}
+.msg .bubble table{width:100%;border-collapse:collapse;margin-top:8px;font-size:11.5px;background:#fff;color:var(--ink)}
+.msg .bubble th,.msg .bubble td{padding:5px 6px;border:1px solid var(--line-soft);text-align:left;vertical-align:top}
+.msg .bubble th{background:var(--surface-2);font-weight:700}
+.msg.tool .bubble{background:var(--surface-2);color:var(--muted);font-family:var(--mono);font-size:11.5px;border-style:dashed}
+.msg.typing .bubble{display:flex;gap:5px;align-items:center;padding:12px 14px}
+.msg.typing i{width:6px;height:6px;border-radius:50%;background:var(--faint);animation:agentTyping 1s infinite ease-in-out}
+.msg.typing i:nth-child(2){animation-delay:.14s}.msg.typing i:nth-child(3){animation-delay:.28s}
+@keyframes agentTyping{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.agent-compose{width:100%;max-width:100%;min-width:0;overflow:hidden;border-top:1px solid var(--line);background:#fff;padding:11px 13px 13px}
+.agent-suggest{display:grid;grid-template-columns:repeat(4,max-content);grid-auto-flow:row;width:100%;max-width:100%;min-width:0;gap:7px;overflow-x:auto;overflow-y:hidden;padding-bottom:8px;scrollbar-width:thin}
+.agent-suggest button{border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer;white-space:nowrap;font-weight:600}
+.agent-suggest button:hover{background:#fff}
+.agent-inputline{display:flex;width:100%;max-width:100%;min-width:0;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:7px 8px;background:var(--surface)}
+.agent-inputline input{border:0;outline:0;flex:1;min-width:0;background:transparent;font-size:13px;padding:3px 4px}
+.agent-inputline button{flex:0 0 auto;border:0;border-radius:7px;background:var(--accent);color:#fff;padding:7px 11px;cursor:pointer;font-size:12.5px;font-weight:700;white-space:nowrap}
+.agent-inputline input:disabled,.agent-inputline button:disabled{opacity:.55;cursor:not-allowed}
+.agent-upgrade{margin:18px;border:1px solid var(--warn-line);border-radius:11px;background:var(--warn-soft);padding:18px}
+.agent-upgrade h3{font-family:var(--serif);font-size:18px;color:var(--warn)}
+.agent-upgrade p{font-size:13.5px;line-height:1.65;margin-top:7px}
+.agent-upgrade ul{font-size:13px;line-height:1.75;margin:9px 0 0;padding-left:19px}
+.agent-upgrade .protag{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11.5px;color:#fff;background:var(--warn);border-radius:999px;padding:4px 9px}
+@media(max-width:900px){.agent-demo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.agent-sim{grid-template-columns:210px minmax(0,1fr)}}
+@media(max-width:680px){.agent-demo-head{flex-direction:column}.agent-demo-grid{grid-template-columns:1fr}.agent-card{aspect-ratio:auto;min-height:0}.agent-sim{display:block;height:min(760px,94vh)}.agent-sim-side{display:none}.agent-sim-main{height:100%}.msg{max-width:96%}}
+@media print{.agent-demo,.agent-sim-mask{display:none!important}}
+</style>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F7FB; --surface:#FFFFFF; --surface-2:#EAF3FA; --surface-3:#DAEBF6;
+  --line:#CDDFED; --line-soft:#E6F0F8;
+  --ink:#0C2645; --muted:#516B85; --faint:#8AA1B6;
+  --accent:#0086C9; --accent-ink:#FFFFFF; --accent-soft:#E1F3FC; --accent-line:#A6DAF2;
+  --warn:#B15C08; --warn-soft:#FBEEDF; --warn-line:#EAC392;
+  --danger:#D0281F; --danger-soft:#FCEAE9; --danger-line:#F2B2AC;
+  --ok:#1C8449; --ok-soft:#E2F4E9; --ok-line:#A3D6B8;
+  --shadow:0 1px 2px rgba(12,38,69,.06), 0 12px 32px -18px rgba(0,134,201,.30);
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+  --serif:"Noto Serif TC","Songti TC",Georgia,serif;
+}
+
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:16.5px; line-height:1.5; -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0; text-wrap:balance; font-weight:700}
+p{margin:0}
+button,input,select{font:inherit; color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+
+.quickfn{display:flex; flex-wrap:wrap; gap:7px; align-items:center; margin:4px 0 14px}
+.quickfn .qf-lbl{font-family:var(--mono); font-size:12px; letter-spacing:.08em; color:var(--faint)}
+.quickfn span:not(.qf-lbl){font-size:14px; font-weight:600; padding:3px 11px; border-radius:999px;
+  background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent-line)}
+.quickfn span.qf-warn{margin-left:auto; font-size:12.5px; font-weight:700;
+  background:var(--danger-soft); color:var(--danger); border-color:var(--danger-line)}
+@media (max-width:560px){ }
+
+
+.trialnote{display:flex; gap:14px; align-items:flex-start; margin:0 0 22px; padding:14px 18px; border:1px solid var(--ok-line); border-left:5px solid var(--ok); border-radius:12px; background:var(--ok-soft); box-shadow:var(--shadow)}
+.trialnote .tn-ic{font-size:26px; line-height:1; flex:none; margin-top:2px}
+.trialnote .tn-hd{display:inline-block; font-family:var(--mono); font-size:14.5px; font-weight:700; letter-spacing:.2em; color:var(--ok); border:2px solid var(--ok-line); border-radius:7px; padding:5px 12px; white-space:nowrap; line-height:1.35}
+.trialnote .tn-bd{font-size:14.5px; color:var(--ink); line-height:1.7; margin-top:8px}
+.trialnote .tn-bd .tn-c1{color:var(--danger); font-weight:800}
+.useguide{margin:0 0 22px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow); overflow:hidden}
+.useguide .ug-hd{display:flex; align-items:center; gap:8px; padding:10px 16px; background:var(--accent-soft); border-bottom:1px solid var(--accent-line); font-weight:700; font-size:15px; color:var(--accent); letter-spacing:.02em}
+.ug-steps{list-style:none; display:grid; grid-template-columns:repeat(3,1fr); margin:0; padding:0}
+.ug-steps li{display:flex; gap:10px; padding:14px 16px; border-right:1px dashed var(--line)}
+.ug-steps li:last-child{border-right:0}
+.ug-steps .ug-n{flex:none; width:24px; height:24px; border-radius:7px; background:var(--accent); color:#fff; font-family:var(--mono); font-weight:700; font-size:13px; display:grid; place-items:center}
+.ug-steps li>div{display:flex; flex-direction:column; gap:3px; min-width:0}
+.ug-steps li b{font-size:14px; line-height:1.35}
+.ug-steps li span{font-size:12.5px; color:var(--muted); line-height:1.55}
+@media (max-width:760px){
+  .ug-steps{grid-template-columns:1fr}
+  .ug-steps li{border-right:0; border-bottom:1px dashed var(--line)}
+  .ug-steps li:last-child{border-bottom:0}
+}
+
+
+header.top{border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:50}
+.top-in{max-width:1080px; margin:0 auto; padding:13px 22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:10px; margin-right:auto}
+.brand .mark{font-family:var(--mono); font-size:12.5px; font-weight:700; letter-spacing:.14em; color:var(--accent); border:1px solid var(--accent-line); background:var(--accent-soft); padding:3px 7px; border-radius:5px}
+.brand h1{font-family:var(--serif); font-size:20.5px}
+.brand .ver{font-size:13.5px; color:var(--faint); font-family:var(--mono)}
+.switch{display:inline-flex; align-items:center; gap:8px; cursor:pointer; border:1px solid var(--line); background:var(--surface-2); border-radius:999px; padding:5px 12px 5px 8px; font-size:14px; user-select:none}
+.switch input{display:none}
+.switch .dot{width:30px; height:17px; border-radius:999px; background:var(--surface-3); position:relative; transition:background .15s; flex:none}
+.switch .dot::after{content:""; position:absolute; top:2px; left:2px; width:13px; height:13px; border-radius:50%; background:var(--surface); box-shadow:0 1px 2px rgba(0,0,0,.25); transition:transform .15s}
+.switch input:checked + .dot{background:var(--accent)}
+.switch input:checked + .dot::after{transform:translateX(13px)}
+
+.wrap{max-width:1080px; margin:0 auto; padding:26px 22px 140px}
+
+
+section.blk{background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:20px}
+.blk-hd{display:flex; align-items:flex-start; gap:13px; padding:18px 22px 15px; border-bottom:1px solid var(--line-soft)}
+.stepno{flex:none; width:27px; height:27px; border-radius:7px; display:grid; place-items:center; font-family:var(--mono); font-size:13.5px; font-weight:700; background:var(--accent); color:var(--accent-ink)}
+.stepno.ghost{background:var(--surface-3); color:var(--muted)}
+.blk-hd h2{font-family:var(--serif); font-size:19px}
+.blk-hd .sub{font-size:14px; color:var(--muted); line-height:1.55; margin-top:3px}
+.blk-bd{padding:20px 22px}
+
+
+.q + .q{margin-top:20px; padding-top:20px; border-top:1px dashed var(--line)}
+.qlab{font-size:15px; font-weight:700; margin-bottom:10px; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap}
+.qlab .idx{font-family:var(--mono); font-size:13px; color:var(--accent); font-weight:700}
+.qlab .opt{font-weight:400; color:var(--faint); font-size:13.5px}
+
+.goals{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px}
+.goal{
+  text-align:left; cursor:pointer; border:1px solid var(--line); background:var(--surface-2);
+  border-radius:10px; padding:13px 14px; display:flex; flex-direction:column; gap:5px; transition:.12s;
+}
+.goal .gfoot{display:flex; align-items:flex-end; justify-content:space-between; gap:8px; margin-top:auto; padding-top:4px}
+.goal .gfoot .gx,.goal .gfoot .soonmark{margin-top:0}
+.goal .gphase{flex:none; font-size:11.5px; font-family:var(--mono); letter-spacing:.08em; padding:2px 9px; border-radius:999px; font-weight:700; align-self:flex-end}
+.goal .gphase.pre{background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent-line)}
+.goal .gphase.mid{background:var(--warn-soft); color:var(--warn); border:1px solid var(--warn-line)}
+.goal:hover{border-color:var(--accent-line)}
+.goal[aria-pressed="true"]{border-color:var(--accent); background:var(--accent-soft); box-shadow:inset 0 0 0 1px var(--accent)}
+.goal .gt{font-size:17px; font-weight:800; display:flex; flex-wrap:nowrap; align-items:center; gap:6px; line-height:1.3; overflow:hidden}
+.goal .gt .gt-t{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}   
+.goal .gt .badge{flex:none}
+.goal .gchips{display:flex; flex-wrap:wrap; gap:5px; margin:-2px 0 2px}
+.goal .gchip{font-size:11.5px; line-height:1.5; padding:2px 10px; border-radius:999px;
+  background:var(--danger-soft); color:var(--danger); border:1px solid var(--danger-line); white-space:nowrap; letter-spacing:-.01em}
+.goal[aria-pressed="true"] .gchip{background:#fff}
+@media (max-width:560px){ .goal .gchip{font-size:11px; padding:2px 8px} }
+.goal .gsum{font-size:13.5px; color:var(--ink); line-height:1.5; letter-spacing:-.02em; background:var(--surface); border:1px solid var(--line); border-radius:7px; padding:6px 9px; margin-top:0}
+.goal .gsum,.goal .gd{font-feature-settings:"palt" 1}   
+.goal .gsum b{color:var(--accent); font-weight:700}
+.goal[aria-pressed="true"] .gsum{background:#fff; border-color:var(--accent-line)}
+.goal .gd{font-size:13.5px; color:var(--muted); line-height:1.55; flex:1}
+.goal .gx{font-size:13.5px; color:var(--accent); font-family:var(--mono); margin-top:4px}
+.goal[aria-pressed="false"] .gx{color:var(--faint)}
+.goal .tick{flex:none; width:18px; height:18px; border-radius:5px; border:1.5px solid var(--faint); background:var(--faint); display:grid; place-items:center; order:-1; margin:0 3px 0 0}
+.goal[aria-pressed="true"] .tick{background:var(--accent); border-color:var(--accent); color:#fff}
+.goal .tick svg{opacity:0; width:10px; height:10px}
+.goal[aria-pressed="true"] .tick svg{opacity:1}
+
+.goal:disabled,.goal.dev-disabled{cursor:not-allowed;pointer-events:none;opacity:.42;background:var(--surface-2);border-color:var(--line-soft);border-style:dashed;filter:grayscale(1);box-shadow:none;-webkit-mask-image:linear-gradient(160deg,#000 30%,rgba(0,0,0,.12) 100%);mask-image:linear-gradient(160deg,#000 30%,rgba(0,0,0,.12) 100%)}
+.goal:disabled:hover,.goal.dev-disabled:hover{border-color:var(--line-soft)}
+.goal:disabled .tick,.goal.dev-disabled .tick{display:none}
+
+
+
+.wiztop{margin-bottom:20px}
+.wizmeta{display:flex; justify-content:space-between; gap:12px; align-items:center; font-size:13.5px; color:var(--muted); margin-bottom:8px}
+.wiztrack{display:grid; grid-template-columns:repeat(5,1fr); gap:6px}
+.wizdot{height:5px; border-radius:999px; background:var(--surface-3)}
+.wizdot.on,.wizdot.done{background:var(--accent)}
+.qpage{display:none}
+.qpage.active{display:block}
+.qpage + .qpage{margin-top:0; padding-top:0; border-top:0}
+.wiznav{display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-top:22px; padding-top:18px; border-top:1px solid var(--line-soft)}
+.wiznav .hint{order:9; width:100%; margin:2px 0 0}
+.expert-reveal{margin-top:16px; display:grid; gap:12px}
+.expert-reveal:empty{display:none}
+.explain-card{border:1px solid var(--accent-line); border-radius:11px; background:var(--surface); overflow:hidden}
+.explain-head{padding:14px 16px; background:var(--accent-soft); border-bottom:1px solid var(--accent-line)}
+.explain-head .eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.1em; color:var(--accent)}
+.explain-head h3{font-family:var(--serif); font-size:18.5px; margin-top:3px}
+.explain-head p{font-size:14.5px; line-height:1.5; margin-top:5px}
+.explain-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0}
+.explain-cell{padding:13px 15px; border-right:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft)}
+.explain-cell:nth-child(2n){border-right:0}
+.explain-cell .k{display:block; font-family:var(--mono); font-size:12px; color:var(--faint); letter-spacing:.08em; margin-bottom:4px}
+.explain-cell p{font-size:14px; line-height:1.5}
+.loopbar{display:flex; align-items:flex-start; gap:9px; padding:12px 15px; background:var(--surface-2)}
+.loopbar .badge{margin-top:2px}
+.loopbar p{font-size:13.5px; color:var(--muted); line-height:1.5}
+.detail-toggle{border:0; border-top:1px solid var(--line-soft); width:100%; text-align:left; background:var(--surface); padding:10px 15px; color:var(--accent); font-size:13.5px; cursor:pointer}
+.detail-body{padding:0 15px 14px; font-size:13.5px; color:var(--muted); line-height:1.55}
+.detail-body[hidden]{display:none}
+.autoconfig-list{display:grid; gap:12px}
+.autoconfig-card{border:1px solid var(--line); border-radius:10px; background:var(--surface-2); padding:14px 15px}
+.autoconfig-card h3{font-family:var(--serif); font-size:17.5px}
+.autoconfig-card .lead{font-size:14.5px; margin-top:4px; line-height:1.5}
+.expert-sales-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.expert-sales-cell{border:1px solid var(--line-soft);border-radius:8px;background:var(--surface);padding:11px 12px}
+.expert-sales-cell .k{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent);margin-bottom:5px}
+.expert-sales-cell p,.expert-sales-cell li{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.expert-sales-cell ul{margin:0;padding-left:17px}
+.expert-notes{margin-top:11px;border-left:3px solid var(--accent);background:var(--accent-soft);padding:11px 13px;border-radius:0 8px 8px 0}
+.expert-notes h4{font-size:14px;margin:0 0 5px}.expert-notes p,.expert-notes li{font-size:13.5px;line-height:1.55}.expert-notes ul{margin:0;padding-left:17px}
+.ladder{margin-top:11px;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.ladder>div{padding:11px 13px;border-top:1px solid var(--line-soft)}
+.ladder>div:first-child{border-top:0}
+.ladder .lk{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding:2px 7px;border-radius:5px;margin-bottom:6px;background:var(--surface-3);color:var(--muted)}
+.ladder .lk.ok{background:var(--ok-soft);color:var(--ok)}
+.ladder .lk.bad{background:var(--danger-soft);color:var(--danger)}
+.ladder p{font-size:13.5px;line-height:1.55}
+.ladder .lm{font-size:13.5px;color:var(--muted);margin-top:5px}
+.ladder-final{background:var(--accent-soft)}
+.ladder-miss{background:var(--danger-soft)}
+.ladder-miss p+p{margin-top:7px}
+.ladder-note{background:var(--warn-soft);font-size:13.5px;color:var(--warn);line-height:1.5}
+@media(max-width:760px){.expert-sales-grid{grid-template-columns:1fr}}
+
+.talk-line{font-size:14px;line-height:1.65;margin:7px 0;padding-left:52px;position:relative}
+.talk-line b.lb{position:absolute;left:0;top:0;font-size:12px;color:var(--accent);font-family:var(--mono)}
+.talk-combo{border:1px solid var(--accent);border-radius:11px;background:var(--accent-soft);padding:15px 16px}
+.talk-combo .tc-h{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-family:var(--serif);font-size:16.5px;margin-bottom:4px}
+.talk-combo .tc-h .tag{font-family:var(--mono);font-size:11px;letter-spacing:.05em;border-radius:5px;padding:2px 7px;color:#fff;background:var(--accent)}
+.talk-combo .cfn{font-size:14px;line-height:1.65;background:var(--surface);border-radius:9px;padding:10px 12px;margin:8px 0}
+.talk-combo>div:not(.cfn)>b{display:block;font-size:12.5px;color:var(--accent);margin-bottom:2px}
+.talk-combo ul{margin:6px 0 0;padding-left:18px}
+.talk-combo li{font-size:13.5px;line-height:1.75}
+
+details.techfold{margin-top:12px;border:1px solid var(--accent-line);border-radius:9px;background:var(--surface);overflow:hidden}
+details.techfold>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:11px 14px;font-size:13.5px;font-weight:700;color:var(--ink);background:var(--surface-2)}
+details.techfold>summary::-webkit-details-marker{display:none}
+details.techfold>summary::before{content:'展開 ▾';flex:0 0 auto;font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;background:var(--danger);border:1px solid var(--danger);border-radius:6px;padding:3px 9px;white-space:nowrap}
+details.techfold[open]>summary::before{content:'收合 ▴'}
+details.techfold>summary:hover{background:var(--danger-soft)}
+details.techfold .tf-body{padding:10px 13px 13px}
+
+.persona-lead{font-size:12.5px;color:var(--muted);font-family:var(--mono);letter-spacing:.02em;margin-top:11px}
+.persona-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 2px;align-items:start}
+.persona-card{border:1px solid var(--accent-line);border-radius:11px;background:var(--surface);padding:13px 14px}
+.persona-card.biz{background:var(--accent-soft)}
+.persona-card .pc-h{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:7px}
+.persona-card ol.pc-pitch{font-size:13.5px;line-height:1.65;margin:0;padding-left:20px}
+.persona-card ol.pc-pitch li{margin-bottom:6px}
+.persona-card ol.pc-pitch li:last-child{margin-bottom:0}
+.persona-card .pc-data{margin-top:10px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:8px;padding:9px 11px}
+.persona-card.biz .pc-data{background:var(--surface)}
+.persona-card .pc-data>b{font-size:11px;color:var(--ink);font-family:var(--mono);letter-spacing:.03em;display:block;margin-bottom:4px}
+.persona-card .pc-data ul{margin:0;padding-left:16px}
+.persona-card .pc-data li{font-size:12px;line-height:1.6;color:var(--muted)}
+.persona-card .pc-ask{margin-top:10px;border-top:1px dashed var(--ink);padding-top:9px}
+.persona-card .pc-ask b{font-size:11.5px;color:var(--accent);font-family:var(--mono);display:block;margin-bottom:4px}
+.persona-card .pc-ask ul{margin:0;padding-left:17px}
+.persona-card .pc-ask li{font-size:13px;line-height:1.7}
+
+@supports(grid-template-rows:subgrid){
+  .persona-wrap{grid-template-rows:repeat(4,auto);row-gap:0}
+  .persona-card{display:grid;grid-template-rows:subgrid;grid-row:span 4}
+  .persona-card>*{align-self:start}
+}
+@media(max-width:760px){
+  .persona-wrap{grid-template-columns:1fr}
+  @supports(grid-template-rows:subgrid){.persona-card{grid-row:auto;display:block}}
+}
+.configpath{display:flex; flex-wrap:wrap; gap:7px; align-items:center; margin-top:11px}
+.configpath .node{background:var(--surface); border:1px solid var(--accent-line); color:var(--ink); border-radius:7px; padding:5px 9px; font-size:13.5px}
+.configpath .arrow{color:var(--accent); font-weight:700}
+.module-benefit{display:block; font-size:13px; color:var(--accent); margin-top:3px; line-height:1.55}
+.stack.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.stack.three{grid-template-columns:1fr}}
+@media(max-width:680px){.explain-grid{grid-template-columns:1fr}.explain-cell{border-right:0}.wiznav{flex-wrap:wrap}.wiznav .hint{width:100%}}
+
+
+.pick[disabled]{cursor:not-allowed; pointer-events:none; opacity:.42; filter:grayscale(1); background:var(--surface-2); border-color:var(--line-soft); border-style:dashed; box-shadow:none; -webkit-mask-image:linear-gradient(160deg,#000 30%,rgba(0,0,0,.12) 100%); mask-image:linear-gradient(160deg,#000 30%,rgba(0,0,0,.12) 100%)}
+.pick[disabled] .pn, .pick[disabled] .pd{color:var(--faint)}
+.pick[disabled]:hover{border-color:var(--line-soft)}
+.soonmark{font-size:13px; color:var(--muted); font-weight:600; margin-top:3px; display:block; line-height:1.5}
+.soonmark .eta{color:var(--faint); font-weight:500}
+.modrow{display:flex; gap:10px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line-soft); flex-wrap:wrap}
+.modrow b{font-size:14.5px; font-weight:600}
+.modrow .mh{font-size:13.5px; color:var(--muted); margin-left:auto; text-align:right; flex:1 1 260px}
+
+.chips{display:flex; flex-wrap:wrap; gap:7px}
+.chip{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:999px; padding:6px 13px; font-size:14.5px; cursor:pointer; transition:.12s}
+.chip:hover{border-color:var(--accent-line)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:500}
+
+.segrow{display:flex; flex-wrap:wrap; gap:16px}
+.seg{display:flex; flex-direction:column; gap:6px}
+.seg > span{font-size:13.5px; color:var(--muted)}
+.segbtns{display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--surface-2)}
+.segbtns button{border:0; background:transparent; padding:6px 13px; font-size:14.5px; cursor:pointer; border-right:1px solid var(--line); transition:.12s}
+.segbtns button:last-child{border-right:0}
+.segbtns button[aria-pressed="true"]{background:var(--accent); color:var(--accent-ink); font-weight:500}
+
+.subgrp{border:1px solid var(--line-soft); background:var(--surface-2); border-radius:9px; padding:12px 14px}
+.subgrp + .subgrp{margin-top:11px}
+.subgrp-t{font-size:13px; font-family:var(--mono); letter-spacing:.09em; color:var(--faint); text-transform:uppercase; margin-bottom:9px}
+
+.numrow{display:flex; flex-wrap:wrap; gap:14px}
+.nf{display:flex; flex-direction:column; gap:5px}
+.nf > span{font-size:13.5px; color:var(--muted)}
+.nf input{width:116px; padding:7px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:15.5px}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}
+input[type="number"]{-moz-appearance:textfield;appearance:textfield}
+.stepwrap{display:inline-flex; align-self:flex-start; align-items:stretch; border:1px solid var(--line); border-radius:7px; overflow:hidden; background:var(--surface); vertical-align:middle}
+.stepwrap input.has-step{border:0!important; border-radius:0!important; width:58px!important; min-width:58px; text-align:center; background:transparent; padding:7px 4px}
+.stepbtn{border:0; background:var(--surface-2); color:var(--ink); width:36px; font-size:19.5px; font-weight:600; line-height:1; cursor:pointer; flex:none; user-select:none; -webkit-user-select:none; display:flex; align-items:center; justify-content:center; transition:background .1s}
+.stepbtn:hover{background:var(--surface-3)}
+.stepbtn:active{background:var(--accent); color:var(--accent-ink)}
+.stepbtn.minus{border-right:1px solid var(--line)}
+.stepbtn.plus{border-left:1px solid var(--line)}
+.hint{font-size:13.5px; color:var(--faint); line-height:1.5; margin-top:5px}
+
+.btn{border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); border-radius:8px; padding:10px 20px; font-size:16px; font-weight:500; cursor:pointer; transition:.12s}
+.btn:hover{filter:brightness(1.08)}
+a.btn{display:inline-block; text-decoration:none; line-height:1.2}
+.btn.ghost{background:transparent; color:var(--accent); border-color:var(--accent-line)}
+.btn.ghost:hover{background:var(--accent-soft)}
+.btn.sm{padding:6px 13px; font-size:14px; border-radius:7px}
+.btnrow{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:20px}
+
+
+.reco-why{background:var(--accent-soft); border:1px solid var(--accent-line); border-radius:10px; padding:14px 16px; margin-bottom:18px}
+.reco-why h3{font-size:14.5px; margin-bottom:7px; color:var(--accent); font-family:var(--mono); letter-spacing:.06em}
+.reco-why ul{margin:0; padding-left:18px; font-size:14.5px; line-height:1.55}
+.reco-why b{color:var(--accent)}
+
+
+.logicmap{margin-bottom:18px; border:1px solid var(--accent-line); border-radius:11px; background:linear-gradient(135deg,var(--accent-soft),var(--surface)); padding:16px}
+.logicmap-hd{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:12px}
+.logicmap-hd h3{font-family:var(--serif); font-size:16.5px}
+.logicmap-hd span{font-size:13.5px; color:var(--muted)}
+.logicflow{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px}
+.logicnode{position:relative; min-width:0; padding:12px 13px; border:1px solid var(--line); border-radius:9px; background:var(--surface); box-shadow:0 1px 2px rgba(16,40,40,.04)}
+.logicnode:not(:last-child)::after{content:"\2192"; position:absolute; right:-17px; top:50%; transform:translateY(-50%); color:var(--accent); font-family:var(--mono); font-weight:700}
+.logicnode .k{display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; color:var(--accent); margin-bottom:3px}
+.logicnode .t{display:block; font-size:15px; font-weight:700}
+.logicnode .d{display:block; font-size:13.5px; color:var(--muted); line-height:1.55; margin-top:4px}
+.logicnode .mapline{display:block; margin-top:7px; padding-top:7px; border-top:1px solid var(--line-soft); font-size:12.5px; line-height:1.5; color:var(--ink)}
+.logiccallout{margin-top:11px; font-size:13.5px; color:var(--muted); line-height:1.5}
+.logiccallout b{color:var(--accent)}
+@media (max-width:820px){
+  .logicflow{grid-template-columns:1fr; gap:18px}
+  .logicnode:not(:last-child)::after{content:"\2193"; right:auto; left:50%; top:auto; bottom:-18px; transform:translateX(-50%)}
+}
+
+
+.flowmap{margin-top:20px; border:1px solid var(--line); border-radius:12px; overflow:hidden}
+.flowmap-hd{padding:12px 15px; background:var(--accent-soft); border-bottom:1px solid var(--accent-line)}
+.flowmap-hd h4{margin:0; font-size:14.5px; color:var(--accent); font-family:var(--serif)}
+.flowmap-hd p{margin:3px 0 0; font-size:13px; color:var(--muted); line-height:1.55}
+.flowphase{padding:14px 15px}
+.flowphase + .flowphase{border-top:1px solid var(--line-soft)}
+.flowphase-t{display:flex; align-items:center; gap:9px; margin-bottom:11px}
+.flowphase-t .ph{font-size:14px; font-weight:700}
+.flowphase-t .sub{font-size:12.5px; color:var(--faint)}
+.flowphase-t .auto{margin-left:auto; font-family:var(--mono); font-size:11px; letter-spacing:.06em; padding:2px 8px; border-radius:5px; background:var(--ok-soft); color:var(--ok); border:1px solid var(--ok-line); white-space:nowrap}
+.flowrow{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px}
+.flowcard{position:relative; border:1px solid var(--line-soft); border-radius:9px; background:var(--surface); padding:10px 12px}
+.flowcard .fx{display:block; font-size:13.5px; font-weight:700; color:var(--accent)}
+.flowcard .fr{display:block; font-size:12px; color:var(--faint); margin:1px 0 7px}
+.flowcard ul{margin:0; padding-left:15px}
+.flowcard li{font-size:13px; color:var(--muted); line-height:1.55}
+.flowcard .fask{margin-top:8px; padding-top:7px; border-top:1px dashed var(--line-soft); font-size:12px; color:var(--faint); line-height:1.55}
+.flowcard .fask b{display:block; color:var(--muted); font-weight:600; margin-bottom:2px}
+.flowchain .flowcard:not(:last-child)::after{content:"\2192"; position:absolute; right:-13px; top:16px; color:var(--accent); font-family:var(--mono); font-weight:700; z-index:1}
+.flowsep{display:flex; align-items:center; justify-content:center; gap:8px; font-size:12.5px; color:var(--muted); padding:8px 0}
+.flowsep::before,.flowsep::after{content:""; height:1px; flex:1; background:var(--line-soft)}
+.flowcombo{margin:0; padding:0; list-style:none; border:1px solid var(--line-soft); border-radius:8px; background:var(--surface); overflow:hidden}
+.flowcombo li{padding:9px 11px; border-top:1px solid var(--line-soft)}
+.flowcombo li:first-child{border-top:0}
+.flowcombo .cq{display:block; font-size:13px; color:var(--ink); line-height:1.5}
+.flowcombo .ce{display:block; margin-top:4px; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; color:var(--accent)}
+.flowmap-ft{padding:11px 15px; background:var(--surface-2); border-top:1px solid var(--line-soft); font-size:13px; color:var(--muted); line-height:1.5}
+.flowmap-ft b{color:var(--accent)}
+@media (max-width:640px){ .flowchain .flowcard:not(:last-child)::after{content:"\2193"; right:auto; left:50%; top:auto; bottom:-13px; transform:translateX(-50%)} }
+
+.stack{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--line); border-radius:10px; overflow:hidden}
+@media (max-width:760px){.stack{grid-template-columns:1fr}}
+.layerbox{padding:13px 14px; border-right:1px solid var(--line); background:var(--surface-2); position:relative; display:flex; flex-direction:column; gap:5px}
+.layerbox:last-child{border-right:0}
+@media (max-width:760px){.layerbox{border-right:0; border-bottom:1px solid var(--line)} .layerbox:last-child{border-bottom:0}}
+.layerbox.filled{background:var(--surface)}
+.layerbox .lnum{font-family:var(--mono); font-size:12px; letter-spacing:.14em; color:var(--faint)}
+.layerbox .lname{font-size:15px; font-weight:700}
+.layerbox .litems{font-size:13.5px; color:var(--muted); line-height:1.5}
+.layerbox .litems em{font-style:normal; color:var(--danger)}
+
+.pickgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:10px}
+.pick{position:relative; text-align:left; cursor:pointer; border:1px solid var(--line); background:var(--surface-2); border-radius:9px; padding:11px 12px; transition:.12s; display:flex; flex-direction:column; gap:3px}
+.pick:hover{border-color:var(--accent-line)}
+.pick[aria-pressed="true"]{border-color:var(--accent); background:var(--accent-soft); box-shadow:inset 0 0 0 1px var(--accent)}
+.pick .pn{display:flex; align-items:baseline; gap:7px}
+.pick .pn b{font-size:15.5px}
+.pick .pn .i{font-family:var(--mono); font-size:13px; color:var(--faint)}
+.pick .pd{font-size:13.5px; color:var(--muted); line-height:1.5}
+.pick .pm{display:flex; align-items:center; gap:6px; margin-top:3px; flex-wrap:wrap}
+.badge{font-size:12.5px; padding:1.5px 6px; border-radius:4px; font-weight:500; white-space:nowrap}
+.badge.ready{background:var(--ok-soft); color:var(--ok)}
+.badge.soon{background:var(--warn-soft); color:var(--warn); border:1px solid var(--warn-line)}
+.badge.reco{background:var(--accent); color:var(--accent-ink)}
+
+
+.orow{display:flex; gap:12px; align-items:flex-start; padding:14px 0; border-top:1px solid var(--line-soft)}
+.orow:first-child{border-top:0; padding-top:2px}
+.orow.needbuy{box-shadow:inset 0 0 0 2px var(--danger); background:var(--danger-soft); border-radius:9px; padding:12px 12px; margin:6px 0}
+.seg.needbuy{box-shadow:inset 0 0 0 2px var(--danger); background:var(--danger-soft); border-radius:9px; padding:10px 12px; margin:6px 0}
+.orow .obody{flex:1; min-width:0}
+.otitle{font-size:15.5px; font-weight:500; display:flex; align-items:center; gap:9px; flex-wrap:wrap}
+.reqtag{font-family:var(--mono); font-size:11px; letter-spacing:.05em; padding:1px 6px; border-radius:5px; background:var(--danger-soft); color:var(--danger); border:1px solid var(--danger-line)}
+.opttag{font-family:var(--mono); font-size:11px; letter-spacing:.05em; padding:1px 6px; border-radius:5px; background:var(--ok-soft); color:var(--ok); border:1px solid var(--ok-line)}
+.odesc{font-size:13.5px; color:var(--muted); line-height:1.5; margin-top:3px}
+.ulimit{font-size:13.5px; color:var(--muted); margin-top:4px; line-height:1.55}
+.check{position:relative; flex:none; width:18px; height:18px; margin-top:3px}
+.check input{position:absolute; inset:0; opacity:0; cursor:pointer; margin:0; width:100%; height:100%}
+.check .box{width:18px; height:18px; border:1.5px solid var(--line); border-radius:5px; background:var(--surface-2); display:grid; place-items:center; transition:.12s; pointer-events:none}
+.check input:checked + .box{background:var(--accent); border-color:var(--accent)}
+.check .box svg{opacity:0; width:11px; height:11px}
+.check input:checked + .box svg{opacity:1}
+.check .box.on{background:var(--accent); border-color:var(--accent)}
+.check .box.on svg{opacity:1}
+.check input:focus-visible + .box{outline:2px solid var(--accent); outline-offset:2px}
+.subopts{margin-top:12px; padding:12px 13px; background:var(--surface-2); border:1px solid var(--line-soft); border-radius:8px}
+.subopts.hidden{display:none}
+.note{font-size:14px; line-height:1.5; padding:11px 13px; border-radius:8px; background:var(--accent-soft); border:1px solid var(--accent-line)}
+.note.warn{background:var(--warn-soft); border-color:var(--warn-line)}
+.note b{color:var(--accent)}
+.note.warn b{color:var(--warn)}
+
+
+.mxwrap{overflow-x:auto}
+table.mx{border-collapse:collapse; width:100%; min-width:700px; font-size:14px}
+table.mx th{font-size:13px; font-weight:500; color:var(--muted); text-align:center; vertical-align:bottom; padding:0 6px 9px; border-bottom:1px solid var(--line); line-height:1.4; white-space:nowrap}
+table.mx th.rowh{text-align:left; padding-left:2px}
+table.mx th small{display:block; font-size:11.5px; color:var(--faint); font-weight:400}
+table.mx td{padding:10px 6px; border-bottom:1px solid var(--line-soft); text-align:center}
+table.mx td.rowh{text-align:left; padding-left:2px; font-weight:500; font-size:14.5px; white-space:nowrap}
+table.mx td.rowh span{display:block; font-family:var(--mono); font-size:12.5px; color:var(--faint); font-weight:400}
+.mdot{display:inline-block; width:13px; height:13px; border-radius:50%; vertical-align:-2px}
+.mdot.filled{background:var(--accent)}
+.mdot.open{border:2px solid var(--accent); background:transparent}
+.xmark{color:var(--danger); font-weight:700}
+.modlab{display:block; font-size:11.5px; color:var(--accent); margin-top:3px; line-height:1.35; white-space:nowrap}
+.mstat{display:inline-block; font-size:12px; padding:1px 6px; border-radius:4px; margin-top:4px; white-space:nowrap}
+.mstat.ok{background:var(--ok-soft); color:var(--ok)}
+.mstat.miss{background:var(--danger-soft); color:var(--danger)}
+.mstat.inc{background:var(--accent-soft); color:var(--accent)}
+.mlegend{display:flex; gap:18px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); padding:13px 2px 0; align-items:center}
+.mlegend b{font-weight:400}
+table.pt{border-collapse:collapse; width:100%; min-width:720px; font-size:14.5px}
+table.pt thead th{
+  font-size:13px; font-weight:500; color:var(--muted); text-align:left; padding:0 10px 10px;
+  border-bottom:1.5px solid var(--line); white-space:nowrap; letter-spacing:.03em;
+}
+table.pt thead th.r{text-align:right}
+table.pt tbody td{padding:11px 10px; border-bottom:1px solid var(--line-soft); vertical-align:top}
+table.pt tbody td.r{text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+table.pt tbody tr.grp td{background:var(--surface-2); font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:7px 10px; border-bottom:1px solid var(--line)}
+table.pt .pname{font-weight:500; line-height:1.45}
+table.pt .pmeta{font-size:13.5px; color:var(--faint); line-height:1.5; margin-top:3px}
+table.pt .incl{margin-top:6px; padding-left:9px; border-left:2px solid var(--line); font-family:var(--mono); font-size:12.5px; color:var(--muted); line-height:1.55}
+table.pt tfoot td{padding:9px 10px; font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; border-top:1px solid var(--line)}
+table.pt tfoot td.lbl{font-family:var(--sans); text-align:right; color:var(--muted); font-size:14px}
+table.pt tfoot tr.total td{font-size:19.5px; font-weight:700; border-top:2px solid var(--accent)}
+.pempty{padding:40px; text-align:center; color:var(--faint); font-size:15px; line-height:1.8}
+
+
+.ngroup + .ngroup{margin-top:20px}
+.ngroup h3{font-size:15px; display:flex; align-items:center; gap:8px; margin-bottom:9px; padding-bottom:7px; border-bottom:1px solid var(--line-soft)}
+.ngroup h3 .k{font-family:var(--mono); font-size:12px; letter-spacing:.1em; color:var(--faint); font-weight:400; margin-left:auto}
+.nsum{font-size:13.5px; line-height:1.55; color:var(--ink); background:var(--accent-soft); border:1px solid var(--accent-line); border-radius:8px; padding:9px 12px; margin-bottom:9px}
+.nlist{display:flex; flex-direction:column; gap:7px}
+.nlist.boxed{gap:0; background:none; border:1px solid var(--line-soft); border-radius:8px; overflow:hidden}
+.nlist.boxed .nitem{background:none; border:0; border-top:1px solid var(--line-soft); border-radius:0}
+.nlist.boxed .nitem:first-child{border-top:0}
+.envsplit:not(:empty){margin-top:24px; padding:15px 18px 5px; background:var(--surface-3); border:1px solid var(--line); border-radius:11px; box-shadow:var(--shadow)}
+.envsplit > .qlab:first-child{font-size:17.5px; padding-bottom:9px; border-bottom:1px solid var(--line); margin-bottom:12px}
+.envsplit .nsum,.envsplit .nlist.boxed{background:var(--surface)}
+.nitem{display:flex; gap:9px; font-size:14px; line-height:1.55; padding:9px 12px; border-radius:8px; background:var(--surface-2); border:1px solid var(--line-soft)}
+.nitem.err{background:var(--danger-soft); border-color:var(--danger-line); color:var(--danger)}
+.nitem.warn{background:var(--warn-soft); border-color:var(--warn-line); color:var(--warn)}
+.nitem .ic{flex:none; font-family:var(--mono); font-weight:700; font-size:13px; padding-top:2px}
+.nitem b{font-weight:700}
+
+
+.stagenav{
+  display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  margin:0 0 20px; padding:16px 20px; border-radius:12px;
+  background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow);
+}
+.stagenav.back{background:var(--surface-2); box-shadow:none}
+.stagenav .sn-msg{font-size:14px; color:var(--muted); line-height:1.5; flex:1 1 240px}
+.stagenav .sn-msg b{color:var(--ink)}
+.stagenav .sn-msg .bad{color:var(--danger); font-weight:700}
+.btn.lg{padding:13px 26px; font-size:17px; margin-left:auto}
+[hidden]{display:none!important}
+
+
+.bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--surface);
+  border-top:1px solid var(--line); box-shadow:0 -6px 22px -14px rgba(0,0,0,.35);
+}
+.bar .bt{display:flex; flex-direction:column; line-height:1.25}
+.bar .bt span{font-size:12.5px; color:var(--muted)}
+.bar .bt b{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:18.5px}
+.bar .bt b.f{color:var(--warn); font-size:16.5px}
+.bar .spacer{margin-left:auto}
+.bar .flag{font-size:13.5px; padding:3px 9px; border-radius:6px}
+.bar .flag.err{background:var(--danger-soft); color:var(--danger); border:1px solid var(--danger-line)}
+.bar .flag.ok{background:var(--ok-soft); color:var(--ok); border:1px solid var(--ok-line)}
+
+footer.foot{font-size:13.5px; color:var(--faint); line-height:1.5; padding-top:6px}
+footer.foot code{font-family:var(--mono); font-size:13px}
+
+
+.modal-mask{position:fixed; inset:0; z-index:200; background:rgba(8,20,20,.55); display:flex; align-items:center; justify-content:center; padding:20px}
+.modal-card{background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); width:min(440px,100%); max-height:92vh; overflow-y:auto; padding:22px 22px 18px}
+.modal-card h3{font-family:var(--serif); font-size:18.5px}
+tr.rw.sus td{background:var(--danger-soft)}
+table.admt{border-collapse:collapse;width:100%;min-width:760px;font-size:13.5px}
+table.admt th{text-align:left;font-size:12.5px;color:var(--muted);padding:0 8px 7px;border-bottom:1.5px solid var(--line);cursor:pointer;white-space:nowrap}
+table.admt td{padding:8px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table.admt td.r,table.admt th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+table.admt tr.rw{cursor:pointer}
+table.admt tr.rw:hover td{background:var(--surface-2)}
+table.admt tr.dt td{background:var(--surface-2);color:var(--muted);font-size:13px}
+
+
+.layerbox.needbuy,.autoconfig-card.needbuy,table.mx tr.needbuy td,.subgrp.needbuy{box-shadow:inset 0 0 0 2px var(--danger); background:var(--danger-soft)!important}
+.buyalert{margin:12px 0 4px; border:1.5px solid var(--danger-line); background:var(--danger-soft); border-radius:10px; padding:12px 14px}
+.buyalert h4{font-size:14.5px; color:var(--danger); margin-bottom:7px}
+.buyalert ul{margin:0; padding-left:18px; font-size:14px; line-height:1.55}
+.buyalert .ok{color:var(--ok); font-size:14px}
+
+
+.brand .logo-img{height:22px;width:auto;display:block}
+.brand .ver{white-space:normal}
+.page-sign{text-align:center;font-size:13px;color:var(--faint);letter-spacing:.03em;padding:22px 0 92px}
+.print-head,.print-foot{display:none}
+
+@media print{
+  
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:var(--bg)!important}
+  .wrap{max-width:none;margin:0;padding:34px 6px 24px}
+  section.blk{box-shadow:none;margin:0 0 11px;overflow:visible}
+  .orow,.ngroup,.modrow,.buyalert,.subgrp,.reco-why,.layerbox,table.pt tbody tr,table.mx tr{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  table.pt{min-width:0}
+  
+  .print-head{display:flex!important;position:fixed;top:0;left:0;right:0;align-items:center;gap:8px;
+    height:24px;padding:3px 6px;border-bottom:1px solid var(--accent-line);background:var(--bg)}
+  .print-head .logo-img{height:18px;width:auto}
+  .print-head .logo-txt{font-weight:700;font-size:13.5px;color:var(--accent);letter-spacing:.05em}
+  .print-head .ph-r{margin-left:auto;font-size:10px;font-weight:700;color:var(--danger);letter-spacing:.02em;white-space:nowrap}
+  .print-foot{display:flex!important;position:fixed;bottom:0;left:0;right:0;align-items:center;justify-content:center;
+    height:20px;font-size:10px;font-weight:700;color:var(--danger);border-top:1px solid var(--danger-line);background:var(--bg)}
+}
+@page{margin:10mm 8mm}
+
+
+table.mini{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface)}
+table.mini th,table.mini td{border:1px solid var(--line-soft);padding:6px 9px;text-align:left;white-space:nowrap}
+table.mini th{background:var(--surface-2);font-weight:700;color:var(--ink)}
+table.mini tbody tr:last-child td{background:var(--accent-soft)}
+
+
+#wizardBlk #qAsContacts{display:none}#wizardBlk:has(#qBlockAS.active) #qAsContacts{display:block}
+.mx td.ascell{white-space:nowrap}.mx td.ascell>div{display:flex;align-items:center;justify-content:center;gap:4px;margin:2px 0}
+.mx.fused{table-layout:fixed}
+.mx.fused thead th{padding:0;vertical-align:top;text-align:left;border-bottom:2px solid var(--accent-line);white-space:normal}
+.mx.fused thead th.fusecorner{width:16%}
+.mx.fused tbody td{white-space:normal;overflow-wrap:anywhere}
+.mx.fused thead th.fusecorner{padding:13px 10px;font-size:14.5px;font-weight:700;color:var(--ink);background:var(--accent-soft)}
+.mx.fused thead th.fusecorner small{display:block;margin-top:6px;font-size:12px;font-weight:400;color:var(--muted)}
+.mx.fused thead th.layth{width:21%;height:1px}
+.mx.fused thead th.layth .layerbox{height:100%;box-sizing:border-box}
+.mx.fused thead th.layth .layerbox *{white-space:normal}
+.mx.fused thead th.layth .layerbox{height:100%;border-right:0;border-left:1px solid var(--line);font-weight:400}
+.mx.fused tbody td:not(.rowh){border-left:1px solid var(--line-soft)}
+.ascontact{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.ascontact .ac-hd{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--accent-soft);border-bottom:1px solid var(--accent-line);font-weight:700;font-size:15px;color:var(--accent)}
+.ascontact .ac-hd small{font-weight:400;font-size:12.5px;color:var(--muted);margin-left:auto}
+.ac-row{display:grid;grid-template-columns:200px 1fr;border-bottom:1px dashed var(--line)}
+.ac-row:last-child{border-bottom:0}
+.ac-role{padding:12px 16px;background:var(--surface-2);font-weight:700;font-size:14px;color:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;line-height:1.4}
+.ac-role small{font-weight:400;font-size:12px;color:var(--muted)}
+.ac-cells{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;padding:10px 12px}
+.ac-cell{border:1px solid var(--line-soft);border-radius:8px;padding:7px 10px;background:var(--surface);text-align:center;display:flex;flex-direction:column;justify-content:center}
+.ac-cell .ac-k{display:block;font-size:12px;color:var(--muted);line-height:1.35}
+.ac-cell .ac-v{display:block;font-size:15px;font-weight:700;color:var(--ink);margin-top:2px}
+.ac-cell.wide{grid-column:1/-1}
+@media(max-width:680px){.ac-row{grid-template-columns:1fr}.ac-role{padding:9px 14px}.ascontact .ac-hd small{display:none}}
+</style>
+<style id="cx-css">
+
+.cx-hero{margin:0 0 22px;padding:26px 26px 22px;border:1px solid var(--accent-line);border-radius:14px;
+  background:linear-gradient(135deg,var(--accent-soft),#fff 70%);box-shadow:var(--shadow)}
+.cx-hero .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--accent);font-weight:700}
+.cx-hero h2{font-family:var(--serif);font-size:28px;margin:6px 0 8px;line-height:1.3}
+.cx-hero p{font-size:15px;color:var(--muted);line-height:1.75;max-width:760px}
+.cx-steps{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cx-steps span{font-size:13px;font-weight:700;color:var(--accent);background:#fff;border:1px solid var(--accent-line);border-radius:999px;padding:4px 12px}
+.cx-block{margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow);padding:20px 22px}
+.cx-block h2{font-family:var(--serif);font-size:19px;margin:0 0 4px}
+.cx-block .sub{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.cx-arch img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:zoom-in}
+.cx-arch figure{margin:0}
+.cx-arch figcaption{margin-top:8px;font-size:13px;color:var(--muted);text-align:center}
+.cx-arch .fb{display:none;color:var(--danger)}
+.cx-arch.err img{display:none}.cx-arch.err .fb{display:inline}.cx-arch.err .ok{display:none}
+.cx-contact{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,#fff,var(--accent-soft))}
+.cx-contact .ic{font-size:30px}
+.cx-contact h2{margin:0}
+.cx-contact p{margin:4px 0 0;font-size:14.5px;color:var(--muted);line-height:1.7}
+.cx-foot{text-align:center;font-size:12.5px;color:var(--faint);padding:8px 0 40px}
+header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:999px;padding:4px 12px;white-space:nowrap}
+@media(max-width:680px){.cx-hero h2{font-size:23px}.cx-hero,.cx-block{padding:18px 16px}}
+
+.cx-sec-hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.cx-sec-hd .no{font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:2px 8px}
+.cx-goals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px}
+.cx-goal{position:relative;text-align:left;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 14px 12px;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s;display:flex;flex-direction:column;gap:7px}
+.cx-goal:hover{border-color:var(--accent-line);transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(0,134,201,.5)}
+.cx-goal.on{border-color:var(--accent);background:linear-gradient(135deg,#fff,var(--accent-soft));box-shadow:0 0 0 3px rgba(0,134,201,.15)}
+.cx-goal .t{display:flex;gap:8px;align-items:flex-start;font-weight:700;font-size:15px;line-height:1.4;color:var(--ink)}
+.cx-goal .ck{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:13px;color:#fff;margin-top:1px}
+.cx-goal.on .ck{background:var(--accent);border-color:var(--accent)}
+.cx-goal .bd{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 8px;color:var(--ok);background:var(--ok-soft);border:1px solid var(--ok-line);white-space:nowrap}
+.cx-goal .bd.soon{color:var(--warn);background:var(--warn-soft);border-color:var(--warn-line)}
+.cx-goal .chips{display:flex;flex-wrap:wrap;gap:5px}
+.cx-goal .chips span{font-size:11.5px;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 8px}
+.cx-goal .d{font-size:13px;color:var(--muted);line-height:1.6}
+.cx-goal .x{font-size:12.5px;color:var(--accent);font-weight:700;margin-top:auto}
+.cx-hint{margin-top:12px;font-size:13px;color:var(--faint)}
+.cx-experts{display:flex;flex-direction:column;gap:14px;margin-top:6px}
+.cx-empty{border:1.5px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--faint);font-size:14px}
+.cx-exp{border:1px solid var(--accent-line);border-radius:12px;background:linear-gradient(135deg,#fff,#F7FBFE);overflow:hidden}
+.cx-exp-hd{display:flex;gap:12px;align-items:flex-start;padding:16px 18px 12px;border-bottom:1px dashed var(--line)}
+.cx-exp-hd .av{flex:none;width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:22px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.cx-exp-hd h3{font-size:17.5px;margin:0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cx-exp-hd h3 .st{font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 9px;color:var(--ok);background:var(--ok-soft);border:1px solid var(--ok-line)}
+.cx-exp-hd h3 .st.soon{color:var(--warn);background:var(--warn-soft);border-color:var(--warn-line)}
+.cx-exp-hd .one{margin:4px 0 0;font-size:14.5px;color:var(--ink);font-weight:500;line-height:1.6}
+.cx-exp-hd .for{margin-top:6px;display:flex;flex-wrap:wrap;gap:5px}
+.cx-exp-hd .for span{font-size:11.5px;color:var(--accent);background:#fff;border:1px solid var(--accent-line);border-radius:999px;padding:1px 8px}
+.cx-exp-bd{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;padding:14px 18px 16px}
+.cx-exp-bd div{font-size:13.5px;line-height:1.7;color:var(--muted)}
+.cx-exp-bd b{display:block;font-size:12.5px;color:var(--accent);letter-spacing:.04em;margin-bottom:2px}
+.cx-exp-bd .wide{grid-column:1/-1}
+.cx-exp-bd .loop b .lp{display:inline-block;margin-left:6px;font-size:11.5px;color:var(--warn);background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:999px;padding:0 8px;letter-spacing:0}
+.cx-exp-bd .loop b .lp.ready{color:var(--ok);background:var(--ok-soft);border-color:var(--ok-line)}
+.cx-combo{margin-top:16px}
+@media(max-width:900px){.cx-goals{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.cx-goals{grid-template-columns:1fr}.cx-exp-bd{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <span class="mark">鼎新數智</span>
+      <h1>資安數智專家</h1>
+      <span class="ver">體驗與說明</span>
+    </div>
+    <span class="cx-chip">DEMO 互動體驗</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="cx-hero">
+    <div class="eyebrow">DIGIWIN · AI SECURITY EXPERTS</div>
+    <h2>認識資安數智專家</h2>
+    <p>資安數智專家是建立在 Agent Space 平台上的 AI 助手，能協助企業查詢、研判、建立待辦、定時巡檢並主動通報。點選下方任一專家，就能直接體驗它可以怎麼協助您的團隊。</p>
+    <div class="cx-steps"><span>① 查詢／研判</span><span>② 建立待辦</span><span>③ 定時巡檢</span><span>④ 告警推播</span></div>
+  </section>
+
+  <section class="agent-demo" id="agentExperience" aria-labelledby="agentExperienceTitle">
+    <div class="agent-demo-head">
+      <div>
+        <div class="eyebrow">AGENT SPACE · INTERACTIVE DEMO</div>
+        <h2 id="agentExperienceTitle">先體驗資安數智專家</h2>
+        <p>點選任一專家，模擬「查詢／研判 → 建立待辦 → 定時巡檢 → 告警推播」；也可以直接問專家「你可以做什麼？」或「你不能做什麼？」。下方再快速認識 Agent Space 的平台能力。</p>
+      </div>
+      <span class="agent-demo-badge">DEMO 模擬</span>
+    </div>
+    <div class="agent-commonbar"><b>所有專家共通自動化能力</b><span>✓ 建立待辦</span><span>✓ 定時巡檢任務</span><span>✓ 告警／推播通知</span><span>✓ 執行結果留存</span></div>
+    <div class="agent-demo-grid">
+      <article class="agent-card">
+        <div class="agent-card-top"><div class="agent-avatar">🖥️</div><div class="agent-card-title"><h3>IT 運維專家</h3><div class="sub">OPS · IT OPERATIONS</div></div></div>
+        <div class="agent-cap"><span>設備告警</span><span>案件進度</span><span>資源巡檢</span></div>
+        <p class="agent-card-desc">查 CPU／RAM／硬碟、設備離線、備份異常等 IT 預警；可把查詢結果直接轉成待辦、每小時巡檢或異常告警。</p>
+        <div class="agent-card-foot"><small>日常維運與服務窗口</small><button class="agent-try" data-agent-demo="itops">點我體驗 →</button></div>
+      </article>
+      <article class="agent-card">
+        <div class="agent-card-top"><div class="agent-avatar">🛡️</div><div class="agent-card-title"><h3>端點安全專家</h3><div class="sub">EDR · ENDPOINT</div></div></div>
+        <div class="agent-cap"><span>EDR 事件</span><span>隔離處置</span><span>事件報告</span></div>
+        <p class="agent-card-desc">查詢端點威脅、受影響設備與事件摘要，進一步建立追查待辦、定期 EDR 巡檢與高風險事件告警。</p>
+        <div class="agent-card-foot"><small>端點事件追查與處置</small><button class="agent-try" data-agent-demo="endpoint">點我體驗 →</button></div>
+      </article>
+      <article class="agent-card">
+        <div class="agent-card-top"><div class="agent-avatar">📡</div><div class="agent-card-title"><h3>資安監控專家</h3><div class="sub">SIEM + S1EDR · SOC</div></div></div>
+        <div class="agent-cap"><span>P1/P2/P3 分級</span><span>攻擊鏈</span><span>P1 通報</span></div>
+        <p class="agent-card-desc">彙整 SIEM 與 EDR 告警、去重收斂與分級研判；可建立 24×7 巡檢、P1 處置待辦與即時通報。</p>
+        <div class="agent-card-foot"><small>24×7 威脅監控</small><button class="agent-try" data-agent-demo="soc">點我體驗 →</button></div>
+      </article>
+      <article class="agent-card">
+        <div class="agent-card-top"><div class="agent-avatar">⚖️</div><div class="agent-card-title"><h3>法遵專家</h3><div class="sub">ISO 27001 · COMPLIANCE</div></div></div>
+        <div class="agent-cap"><span>合規缺口</span><span>弱掃閉環</span><span>稽核證據</span></div>
+        <p class="agent-card-desc">查詢弱掃點數、進度與專案記錄，對照 ISO 27001 控制項，整理缺口、改善動作與複掃閉環證據。</p>
+        <div class="agent-card-foot"><small>合規盤點與改善追蹤</small><button class="agent-try" data-agent-demo="compliance">點我體驗 →</button></div>
+      </article>
+      <article class="agent-card custom">
+        <div class="agent-card-top"><div class="agent-avatar">🧩</div><div class="agent-card-title"><h3>自建立技能</h3><div class="sub">CUSTOM SKILL · PRO</div></div></div>
+        <div class="agent-cap"><span>上傳 Skill</span><span>拆分技能</span><span>部門情境包</span></div>
+        <p class="agent-card-desc">把企業 SOP、Prompt、規則與流程拆成獨立 Skill；建立後同樣可串接待辦、定時任務與通知。此能力需 Agent Space 專業版。</p>
+        <div class="agent-card-foot"><small>需購買專業版</small><button class="agent-try" data-agent-demo="custom">了解專業版 →</button></div>
+      </article>
+    </div>
+
+    <div class="agent-platform">
+      <div class="agent-platform-hd"><div><h3>Agent Space 是專家背後的共通平台</h3><p>讓 AI 不只回答問題，還能記住工作脈絡、連接企業知識、主動執行任務，同時由企業控管資料、權限與使用成本。</p></div><span class="plat-tag">PLATFORM CAPABILITIES</span></div>
+      <div class="agent-platform-grid">
+        <div class="agent-platform-item"><div class="pi">🧠</div><b>記憶與逐步學習</b><p>累積常用問法、偏好與工作脈絡，讓後續協作更貼近企業使用方式。</p></div>
+        <div class="agent-platform-item"><div class="pi">🏢</div><b>企業知識／資料庫</b><p>整合 SOP、文件、案件與企業資料，形成專家可依權限調用的知識空間。</p></div>
+        <div class="agent-platform-item"><div class="pi">🔔</div><b>主動任務與多通路通知</b><p>支援定期任務、郵件監控、待辦，以及 Email／LINE／Telegram 等推播。</p></div>
+        <div class="agent-platform-item"><div class="pi">🤖</div><b>多模型選擇</b><p>可依任務難度、速度與成本選用不同 AI 模型。</p><div class="model-tags"><span>GPT</span><span>Claude</span><span>Gemini</span></div></div>
+        <div class="agent-platform-item security"><div class="pi">🔐</div><b>隱私、權限與稽核</b><p>敏感資料可先脫敏／攔截；傳輸採 TLS，搭配 IAM、Agent、資料授權與租戶隔離，操作可留存稽核軌跡。</p></div>
+        <div class="agent-platform-item points"><div class="pi">🪙</div><b>AI 點數與配額管理</b><p>AI 使用統一以點數計量；公司共用點數池，可限制組織／使用者日月額度，餘額不足前可告警。</p></div>
+      </div>
+      <div class="agent-platform-note">資料本體與企業知識以客戶端平台為主；雲端模型依企業方案使用加密傳輸。點數消耗會依輸入／輸出與流程複雜度而不同。</div>
+    </div>
+  </section>
+  
+
+  <section class="cx-block" id="cxNeeds">
+    <div class="cx-sec-hd"><span class="no">STEP 2</span><h2>您想解決什麼？</h2></div>
+    <div class="sub">點選符合您情況的需求（可複選），下方會帶出對應的資安數智專家說明。多選時，各專家能力可以疊加，形成更完整的自動化閉環。</div>
+    <div class="cx-goals" id="cxGoals"></div>
+    <div class="cx-combo"><details class="techfold" id="comboRefDiagram"><summary>多位專家組合起來，會是什麼樣子？（事前 → 事中偵測 → 處置 → 稽核留痕）</summary><div class="tf-body">
+        <div class="flowmap">
+          <div class="flowmap-hd">
+            <h4>專家可以怎麼組合？——依事件生命週期串接</h4>
+            <p>多選需求時系統會帶出對應的多位專家；下面是這些專家依「事前預防 → 事中偵測 → 處置 → 稽核留痕」串成的自動化流程，每一段都可用自然語言驅動。</p>
+          </div>
+
+          <div class="flowphase">
+            <div class="flowphase-t"><span class="ph">事前 · 預防與治理</span><span class="sub">定期執行，降低事件發生機率與稽核成本</span><span class="auto">可自動化</span></div>
+            <div class="flowrow">
+              <div class="flowcard"><span class="fx">法規遵循專家</span><span class="fr">掃描週期與稽核季</span>
+                <ul><li>弱掃點數/對象/範圍確認</li><li>掃描報告產出與進度</li><li>弱點內容與修補建議</li><li>ISO 27001 合規缺口對照</li></ul>
+                <div class="fask"><b>客戶可以這樣問</b>「目前 ISO 27001 哪些控制項缺少證據？」<br>「這次弱掃還有多少點數，可以掃哪些對象？」</div></div>
+              <div class="flowcard"><span class="fx">資料安全專家</span><span class="fr">備份負責人的一週</span>
+                <ul><li>備份工作與失敗紀錄確認</li><li>目前排定的備份排程</li><li>執行備份完整性驗證</li><li>還原點/儲存庫健康檢查</li></ul>
+                <div class="fask"><b>客戶可以這樣問</b>「昨天有哪些備份工作失敗或逾期？」<br>「請執行既有的備份完整性驗證並回傳結果。」</div></div>
+            </div>
+          </div>
+
+          <div class="flowsep">事件發生</div>
+
+          <div class="flowphase">
+            <div class="flowphase-t"><span class="ph">事中 · 偵測與處置</span><span class="sub">巡檢 → 判斷通報 → 隔離處置 → 合規留痕</span><span class="auto">可自動化</span></div>
+            <div class="flowrow flowchain">
+              <div class="flowcard"><span class="fx">IT運維專家</span><span class="fr">服務窗口的日常</span>
+                <ul><li>案件現在狀態與處理進度</li><li>近期事件列表</li><li>昨天的 EDR/SIEM 事件(可查、不分風險等級)</li><li>本月風險報告</li></ul>
+                <div class="fask"><b>客戶可以這樣問</b>「哪些伺服器 CPU 或記憶體持續過高？」<br>「昨天有哪些 EDR/SIEM 事件或維運案件？」</div></div>
+              <div class="flowcard"><span class="fx">資安監控專家</span><span class="fr">值班同仁的一天</span>
+                <ul><li>過夜告警分級摘要</li><li>攻擊路徑與影響範圍判讀</li><li>弱掃修補優先級(CVE 分級)</li><li>初複掃結果與待辦追蹤</li></ul>
+                <div class="fask"><b>客戶可以這樣問</b>「昨天有哪些需要通報的 P1 事件？」<br>「這筆告警的攻擊路徑與影響範圍是什麼？」</div></div>
+              <div class="flowcard"><span class="fx">端點安全專家</span><span class="fr">事故發生的兩小時</span>
+                <ul><li>高風險預警整理成待辦</li><li>隔離威脅、中斷橫向擴散</li><li>端點溯源分析+全機掃描</li><li>合規報告+處置順序留痕</li></ul>
+                <div class="fask"><b>客戶可以這樣問</b>「請隔離這台高風險端點並建立待辦。」<br>「請產出這次事件的執行摘要與 ISO 27001 報告。」</div></div>
+            </div>
+          </div>
+
+          <div class="flowphase">
+            <div class="flowphase-t"><span class="ph">同時導入多位專家 · 客戶可以這樣問</span><span class="sub">一句話跨專家串起「判斷 → 處置 → 留痕」</span></div>
+            <ul class="flowcombo">
+              <li><span class="cq">「這筆告警的攻擊路徑是什麼？先隔離受影響端點，再產出這次事件的 ISO 27001 合規報告。」</span><span class="ce">資安監控 → 端點安全 → 法規遵循</span></li>
+              <li><span class="cq">「要隔離這台高風險主機之前，先確認它有沒有可用的還原點與完整備份。」</span><span class="ce">端點安全 + 資料安全</span></li>
+              <li><span class="cq">「昨天巡檢發現的異常，幫我判斷嚴重度，需要的話直接隔離並建立待辦。」</span><span class="ce">IT運維 → 資安監控 → 端點安全</span></li>
+              <li><span class="cq">「這季稽核要的證據，把這段時間的偵測、處置與備份驗證紀錄整理成一份對照 ISO 27001 的資料包。」</span><span class="ce">法規遵循 + 資安監控 + 端點安全 + 資料安全</span></li>
+            </ul>
+          </div>
+
+          <div class="flowmap-ft"><b>組合後成果：</b>單獨導入任一位專家即可運作；<b>同時導入時，事前的預防紀錄與事中的偵測、處置軌跡會自動串成同一條合規證據鏈</b>，形成 24 小時無人化的資安閉環。</div>
+        </div>
+        </div></details></div>
+  </section>
+
+  <section class="cx-block" id="cxExperts">
+    <div class="cx-sec-hd"><span class="no">STEP 3</span><h2>適合您的專家</h2></div>
+    <div class="sub">依您在上方選擇的需求，帶出對應的專家與能力說明；可同時需要多位專家。</div>
+    <div class="cx-experts" id="cxExpertBox"></div>
+  </section>
+
+  <section class="cx-block cx-arch" id="cxArch">
+    <h2>整體協作架構</h2>
+    <div class="sub">企業使用者、數智分身、多智能體平台、Ai 智管家平台、資訊設備在可視化平台全域協作</div>
+    <figure>
+      <a href="https://techops.digiwin.com/wp-content/uploads/2026/08/%E4%BC%81%E6%A5%AD%E4%BD%BF%E7%94%A8%E8%80%85%E3%80%81%E6%95%B8%E6%99%BA%E5%88%86%E8%BA%AB%E3%80%81%E5%A4%9A%E6%99%BA%E8%83%BD%E9%AB%94%E5%B9%B3%E5%8F%B0%E3%80%81Ai-%E6%99%BA%E7%AE%A1%E5%AE%B6%E5%B9%B3%E5%8F%B0%E3%80%81%E8%B3%87%E8%A8%8A%E8%A8%AD%E5%82%99%E5%9C%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E5%B9%B3%E5%8F%B0%E5%85%A8%E5%9F%9F%E5%8D%94%E4%BD%9C-2.jpg" target="_blank" rel="noopener noreferrer" title="點擊開啟原圖">
+        <img src="https://techops.digiwin.com/wp-content/uploads/2026/08/%E4%BC%81%E6%A5%AD%E4%BD%BF%E7%94%A8%E8%80%85%E3%80%81%E6%95%B8%E6%99%BA%E5%88%86%E8%BA%AB%E3%80%81%E5%A4%9A%E6%99%BA%E8%83%BD%E9%AB%94%E5%B9%B3%E5%8F%B0%E3%80%81Ai-%E6%99%BA%E7%AE%A1%E5%AE%B6%E5%B9%B3%E5%8F%B0%E3%80%81%E8%B3%87%E8%A8%8A%E8%A8%AD%E5%82%99%E5%9C%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E5%B9%B3%E5%8F%B0%E5%85%A8%E5%9F%9F%E5%8D%94%E4%BD%9C-2.jpg" alt="企業使用者、數智分身、多智能體平台、Ai 智管家平台、資訊設備在可視化平台全域協作架構圖" loading="lazy" referrerpolicy="no-referrer"
+             onerror="document.getElementById('cxArch').classList.add('err')">
+      </a>
+      <figcaption><span class="ok">點擊圖片可開啟原圖放大檢視</span><span class="fb">圖片暫時無法載入，請<a href="https://techops.digiwin.com/wp-content/uploads/2026/08/%E4%BC%81%E6%A5%AD%E4%BD%BF%E7%94%A8%E8%80%85%E3%80%81%E6%95%B8%E6%99%BA%E5%88%86%E8%BA%AB%E3%80%81%E5%A4%9A%E6%99%BA%E8%83%BD%E9%AB%94%E5%B9%B3%E5%8F%B0%E3%80%81Ai-%E6%99%BA%E7%AE%A1%E5%AE%B6%E5%B9%B3%E5%8F%B0%E3%80%81%E8%B3%87%E8%A8%8A%E8%A8%AD%E5%82%99%E5%9C%A8%E5%8F%AF%E8%A6%96%E5%8C%96%E5%B9%B3%E5%8F%B0%E5%85%A8%E5%9F%9F%E5%8D%94%E4%BD%9C-2.jpg" target="_blank" rel="noopener noreferrer">點此開啟原圖</a></span></figcaption>
+    </figure>
+  </section>
+
+  <section class="cx-block cx-contact">
+    <div class="ic">🤝</div>
+    <div>
+      <h2>想進一步了解？</h2>
+      <p>歡迎洽詢您的<b>鼎新數智業務窗口</b>，我們會依您的需求與環境，協助規劃最適合的資安數智專家組合。</p>
+    </div>
+  </section>
+
+  <div class="cx-foot">© 鼎新數智　·　本頁為 DEMO 模擬體驗，展示內容皆為示意資料，不連線正式環境。</div>
+</div>
+
+<div class="agent-sim-mask noprint" id="agentSimMask" hidden>
+    <div class="agent-sim" role="dialog" aria-modal="true" aria-labelledby="agentSimTitle">
+      <aside class="agent-sim-side">
+        <div class="agent-sim-brand"><span class="mark">DIGIWIN</span><b>Agent 體驗中心</b></div>
+        <div class="agent-sim-who"><div class="av" id="agentSimAvatar">🤖</div><h3 id="agentSimSideTitle">資安數智專家</h3><p id="agentSimSideDesc">DEMO 模擬互動</p></div>
+        <div class="agent-sim-skilltitle">AVAILABLE SKILLS</div>
+        <div class="agent-sim-skills" id="agentSimSkills"></div>
+        <div class="agent-sim-sidefoot">DEMO ONLY<br>不連正式 API · 不建立真實排程 · 不寄信</div>
+      </aside>
+      <main class="agent-sim-main">
+        <div class="agent-sim-top"><b id="agentSimTitle">專家體驗</b><span class="live">● Ready</span><span class="demo">DEMO</span><span class="spacer"></span><button class="agent-sim-iconbtn" id="agentSimReset">重設</button><button class="agent-sim-iconbtn" id="agentSimClose">✕ 關閉</button></div>
+        <div class="agent-chat" id="agentChat" aria-live="polite"></div>
+        <div class="agent-compose"><div class="agent-suggest" id="agentSuggest"></div><div class="agent-inputline"><input id="agentDemoInput" placeholder="也可以輸入自己的問題（DEMO 會依專家能力回應）"><button id="agentDemoSend">送出</button></div></div>
+      </main>
+    </div>
+  </div>
+
+  
+<script id="agentDemoScript">
+(function(){
+  'use strict';
+  const DATA={
+    itops:{
+      title:'IT 運維專家', avatar:'🖥️', desc:'唯讀巡檢 · IT 事件與設備預警',
+      skills:['IT事件與資安事件','設備預警查詢','建立待辦','定期巡檢','告警通知'],
+      intro:'👑師傅🤔，我是 IT 運維專家。你可以直接問設備告警、案件狀態，或建立每小時巡檢。這裡是 DEMO 模式，只模擬結果、不會真的呼叫正式環境。',
+      prompts:['你可以做什麼','你不能做什麼','查過去一小時 IT 告警','建立每小時巡檢','建立異常告警','查近期案件進度'],
+      answers:{
+        '你可以做什麼':`我是 <b>IT 運維專家</b>，主要負責查詢、巡檢、整理與通報：<table><tr><th>能做什麼</th><th>處理方式</th></tr><tr><td>設備資源巡檢</td><td>查詢 CPU、RAM、硬碟、設備離線與備份異常</td></tr><tr><td>異常整理</td><td>彙整設備、時間、狀態、級別與建議措施</td></tr><tr><td>追蹤與通報</td><td>建立待辦、定時巡檢及 Email／LINE／Telegram 告警通知（依租戶設定）</td></tr><tr><td>案件查詢</td><td>查詢鼎新服務案件進度與處理狀態</td></tr><tr><td>維護轉交</td><td>若客戶已購買鼎新硬體維護服務，可轉由鼎新維護團隊接手處理</td></tr></table><span class="mini">DEMO · 僅模擬查詢與流程，不會操作正式環境</span>`,
+        '你不能做什麼':`我可以發現問題、整理資訊並通報，但<b>無法直接動手排除設備問題</b>：<table><tr><th>不能直接做什麼</th><th>後續方式</th></tr><tr><td>登入或修改客戶設備設定</td><td>提供異常資訊與建議，由授權人員執行</td></tr><tr><td>更換硬碟、記憶體、電源等硬體</td><td>若已購買鼎新硬體維護服務，可轉由鼎新維護團隊處理</td></tr><tr><td>重啟主機、停止程序或調整系統服務</td><td>先建立待辦與通報，由客戶或維護人員確認後處理</td></tr><tr><td>執行端點隔離、惡意程式清除</td><td>轉交端點安全專家或資安人員處理</td></tr><tr><td>自行判定進階資安攻擊</td><td>轉交資安監控專家進行關聯研判</td></tr></table><br><b>重點：</b>本專家可以巡檢、發現、記錄與通報，但不會越權操作或直接排除問題。`,
+        '查過去一小時 IT 告警':`已完成 IT 設備資源告警掃描。以下為模擬資料（DEMO 模式，未實際呼叫生產環境 API）：<br><table><tr><th>預警標題</th><th>預警實例</th><th>預警時間</th><th>預警狀態</th><th>預警級別</th><th>建議措施</th></tr><tr><td>CPU使用率過高</td><td>【主機】HOST-A01</td><td>2026-09-02 08:15:00</td><td>處理中</td><td>嚴重</td><td>建議檢查異常程序並釋放CPU資源</td></tr><tr><td>記憶體使用率過高</td><td>【主機】HOST-A02</td><td>2026-09-02 08:20:00</td><td>處理中</td><td>錯誤</td><td>建議重啟服務或增加記憶體配置</td></tr><tr><td>硬碟空間不足</td><td>【主機】HOST-A03</td><td>2026-09-02 08:25:00</td><td>未處理</td><td>嚴重</td><td>建議清理暫存檔或擴充儲存空間</td></tr><tr><td>CPU使用率過高</td><td>【主機】HOST-A04</td><td>2026-09-02 08:30:00</td><td>未處理</td><td>警告</td><td>建議持續觀察CPU使用趨勢</td></tr><tr><td>記憶體使用率過高</td><td>【主機】HOST-A05</td><td>2026-09-02 08:35:00</td><td>處理中</td><td>嚴重</td><td>建議排查記憶體洩漏程序</td></tr><tr><td>硬碟空間不足</td><td>【主機】HOST-A06</td><td>2026-09-02 08:40:00</td><td>已處理</td><td>錯誤</td><td>建議定期清理日誌檔案</td></tr><tr><td>CPU使用率過高</td><td>【主機】HOST-A07</td><td>2026-09-02 08:45:00</td><td>處理中</td><td>錯誤</td><td>建議調整程序優先權或擴充運算資源</td></tr><tr><td>記憶體使用率過高</td><td>【主機】HOST-A08</td><td>2026-09-02 08:50:00</td><td>未處理</td><td>警告</td><td>建議監控記憶體使用曲線</td></tr><tr><td>硬碟空間不足</td><td>【主機】HOST-A09</td><td>2026-09-02 08:55:00</td><td>處理中</td><td>嚴重</td><td>建議立即擴充磁碟空間避免服務中斷</td></tr><tr><td>CPU使用率過高</td><td>【主機】HOST-A10</td><td>2026-09-02 09:00:00</td><td>未處理</td><td>錯誤</td><td>建議檢查排程作業是否異常佔用資源</td></tr></table><span class="mini">DEMO · 模擬資料 · 未實際呼叫生產環境 API</span>`,
+        '建立每小時巡檢':`✅ 已模擬建立「IT 運維每小時巡檢」。<br><br><b>頻率：</b>每小時整點<br><b>內容：</b>查詢前 1 小時設備預警事件<br><b>輸出：</b>預警標題／實例／時間／狀態／級別／建議措施<br><b>異常處理：</b>API 失敗即停止，不編造資料<br><br>正式環境若已完成 Email 通道設定，可再串接通知。<span class="mini">DEMO · 未建立真實排程</span>`,
+        '建立異常告警':`✅ 已模擬建立「IT 設備異常告警」。<br><br><b>觸發來源：</b>設備預警 / 備份異常 / 離線事件<br><b>觸發後：</b>建立待辦 + 推播摘要<br><b>通道：</b>Email / LINE / Telegram（依租戶設定）<br><br>正式環境可再設定告警條件、通知對象與時段。<span class="mini">DEMO · 未建立真實告警</span>`,
+        '查近期案件進度':`近期處理中案件已整理：<table><tr><th>案件代號</th><th>內容</th><th>狀態</th></tr><tr><td>ESD003923113</td><td>VMware Admin User Account Properties Changed</td><td>處理中</td></tr><tr><td>ESC003879660</td><td>設備監控 / 事件接收異常</td><td>處理中</td></tr></table><br>如要追特定案件，可直接輸入案件代號。<span class="mini">DEMO · 範例資料</span>`
+      }
+    },
+    endpoint:{
+      title:'端點安全專家', avatar:'🛡️', desc:'EDR 事件查詢 · 端點處置與事件報告',
+      skills:['S1EDR-事件列表','端點威脅隔離','事件報告','建立待辦','定期巡檢','告警通知'],
+      intro:'👑師傅🤔，我是端點安全專家。可以查 EDR 事件、整理事件報告，也能示範高風險端點的隔離與處置流程；若已購買鼎新 MDR 服務，目前可於上班時間提供 5×8 問題諮詢與一鍵還原協助。',
+      prompts:['你可以做什麼','你不能做什麼','查近一週 EDR 事件','建立每小時端點巡檢','建立高風險告警','模擬高風險端點處置','給我精簡事件報告'],
+      answers:{
+        '你可以做什麼':`👑師傅🤔，這支端點安全專家目前能力整理如下：<table><tr><th>類別</th><th>能做什麼</th><th>不能做什麼</th></tr><tr><td>EDR 事件查詢</td><td>查指定時間區間的 EDR 事件主列表</td><td>不能憑一句話直接判斷所有事件根因</td></tr><tr><td>事件摘要整理</td><td>整理事件總數、分類、站點、threatName、最近時間</td><td>不能保證所有事件都有完整上下文</td></tr><tr><td>事件報告</td><td>產出精簡版事件報告，適合截圖或快速回報</td><td>不能直接當正式鑑識報告或法律證據</td></tr><tr><td>條件篩選</td><td>依時間、站點、threatName、classification、裝置名稱等條件查詢</td><td>不能在條件不足時自動猜測真正的查詢範圍</td></tr><tr><td>定期巡檢</td><td>建立定期巡檢排程，定時統整事件</td><td>不能保證外部系統每次都正常回應</td></tr><tr><td>通知整合</td><td>在流程中安排通知；環境支援時可發信</td><td>不能保證所有租戶都已完成 Email／LINE／Telegram 串接</td></tr><tr><td>即時執行</td><td>立即查詢、執行一次或調整排程</td><td>不能跳過必要條件建立不完整查詢</td></tr><tr><td>事件追查輔助</td><td>依事件內容提供初步風險判斷與處置方向</td><td>不能取代資安人員最終研判</td></tr><tr><td>自動化流程</td><td>建立巡檢與摘要彙整流程</td><td>不能在未授權時自動執行高風險處置</td></tr><tr><td>端點處置</td><td>提供隔離、掃描、追查等建議方向</td><td>本 DEMO 不直接執行隔離、解除隔離或清除</td></tr><tr><td>報表輸出</td><td>把查詢結果整理成精簡可讀格式</td><td>不能保證直接符合所有公司正式報告格式</td></tr><tr><td>歷史監看</td><td>以固定頻率持續巡檢近一段時間的事件</td><td>不能替代完整 SOC 監控中心所有功能</td></tr></table><br><b>補充：</b>即時通知需先完成 Email／LINE／Telegram 串接；更完整的處置可再串接事件明細、受影響設備與後續處置流程。`,
+        '你不能做什麼':`👑師傅🤔，這支端點安全專家目前能力整理如下：<table><tr><th>類別</th><th>能做什麼</th><th>不能做什麼</th></tr><tr><td>EDR 事件查詢</td><td>查指定時間區間的 EDR 事件主列表</td><td>不能憑一句話直接判斷所有事件根因</td></tr><tr><td>事件摘要整理</td><td>整理事件總數、分類、站點、threatName、最近時間</td><td>不能保證所有事件都有完整上下文</td></tr><tr><td>事件報告</td><td>產出精簡版事件報告，適合截圖或快速回報</td><td>不能直接當正式鑑識報告或法律證據</td></tr><tr><td>條件篩選</td><td>依時間、站點、threatName、classification、裝置名稱等條件查詢</td><td>不能在條件不足時自動猜測真正的查詢範圍</td></tr><tr><td>定期巡檢</td><td>建立定期巡檢排程，定時統整事件</td><td>不能保證外部系統每次都正常回應</td></tr><tr><td>通知整合</td><td>在流程中安排通知；環境支援時可發信</td><td>不能保證所有租戶都已完成 Email／LINE／Telegram 串接</td></tr><tr><td>即時執行</td><td>立即查詢、執行一次或調整排程</td><td>不能跳過必要條件建立不完整查詢</td></tr><tr><td>事件追查輔助</td><td>依事件內容提供初步風險判斷與處置方向</td><td>不能取代資安人員最終研判</td></tr><tr><td>自動化流程</td><td>建立巡檢與摘要彙整流程</td><td>不能在未授權時自動執行高風險處置</td></tr><tr><td>端點處置</td><td>提供隔離、掃描、追查等建議方向</td><td>本 DEMO 不直接執行隔離、解除隔離或清除</td></tr><tr><td>報表輸出</td><td>把查詢結果整理成精簡可讀格式</td><td>不能保證直接符合所有公司正式報告格式</td></tr><tr><td>歷史監看</td><td>以固定頻率持續巡檢近一段時間的事件</td><td>不能替代完整 SOC 監控中心所有功能</td></tr></table><br><b>補充：</b>即時通知需先完成 Email／LINE／Telegram 串接；更完整的處置可再串接事件明細、受影響設備與後續處置流程。`,
+        '查近一週 EDR 事件':`近一週 EDR 事件已整理。<br><br><b>總事件數：</b>1<br><b>分類：</b>惡意軟體 Malware<br><table><tr><th>最近時間</th><th>Threat</th><th>站點</th><th>次數</th></tr><tr><td>07/22 18:39</td><td>SHIPPING DOCUMENTS_PDF.VBS</td><td>Data System-02400000</td><td>3</td></tr></table><br>檔名疑似以雙重副檔名偽裝 PDF，建議先確認是否真的執行，再追受影響設備明細。<span class="mini">DEMO · 模擬查詢</span>`,
+        '建立每小時端點巡檢':`✅ 已模擬建立「EDR 每小時巡檢」。<br><br><b>巡檢：</b>近 1 小時 EDR 事件<br><b>有事件：</b>建立追查待辦並整理摘要<br><b>高風險：</b>觸發告警推播，交由端點處置流程<br><b>無事件：</b>留存本輪正常紀錄<span class="mini">DEMO · 未建立真實排程</span>`,
+        '建立高風險告警':`✅ 已模擬建立「EDR 高風險事件告警」。<br><br>當偵測到憑證竊取、勒索、惡意程序或其他高風險條件時，自動建立待辦並依租戶設定推播 Email / LINE / Telegram。<span class="mini">DEMO · 未建立真實告警</span>`,
+        '模擬高風險端點處置':`🚨 <b>CRITICAL 9.0</b>｜FIN-WKS-0173 偵測到 mimikatz 憑證竊取行為。<br><table><tr><th>步驟</th><th>模擬結果</th></tr><tr><td>端點網路隔離</td><td>成功</td></tr><tr><td>全機掃描 / 清除</td><td>完成</td></tr><tr><td>複查</td><td>無殘留異常</td></tr><tr><td>解除隔離</td><td>成功</td></tr></table><br>後續建議：強制更換受影響帳號密碼，並檢查同網段異常登入。<span class="mini">DEMO · 不會真的隔離任何設備</span>`,
+        '給我精簡事件報告':`<b>EDR 事件報告（精簡版）</b><br><br>事件：SHIPPING DOCUMENTS_PDF.VBS<br>類型：惡意軟體 / 社交工程投遞<br>影響站點：Data System-02400000<br>初步風險：中高<br><br><b>建議處置：</b>確認是否執行 → 查設備明細 → 若已執行則隔離與全機掃描 → 追查郵件來源 → 橫向比對近 7～30 天類似 .vbs / 雙重副檔名事件。<span class="mini">DEMO · 報告範例</span>`
+      }
+    },
+    soc:{
+      title:'資安監控專家', avatar:'📡', desc:'SIEM + S1EDR · 即時威脅偵測與 P1 通報',
+      skills:['即時威脅偵測與分級告警','全時威脅監控與P1通報','攻擊鏈分析','建立待辦','定時巡檢','多通路告警'],
+      intro:'👑師傅🤔，我是資安監控專家。會把 SIEM 與 S1EDR 告警收斂去重、做 P1/P2/P3 分級，並整理攻擊鏈與通報摘要。',
+      prompts:['你可以做什麼','你不能做什麼','昨天有沒有需要通報','幫我看攻擊路徑','建立每小時威脅巡檢','建立 P1 即時告警'],
+      answers:{
+        '你可以做什麼':`我是 <b>資安監控專家</b>。我可以彙整 SIEM＋EDR 告警、去重收斂、P1／P2／P3 分級、重組攻擊路徑與影響範圍，並建立監控摘要、威脅待辦、定時巡檢與 P1 通報。`,
+        '你不能做什麼':`我負責 <b>偵測、研判、分級與通報</b>，不直接執行端點隔離、斷網或惡意程式清除；需要實際端點處置時交由端點安全專家。沒有資料證據時也不會編造攻擊鏈或橫向移動結論。`,
+        '昨天有沒有需要通報':`需要。昨日巡檢偵測到 <b>5 筆 P1</b> 威脅，影響 WEB-SVR01、DB-SVR02、FIN-PC07。<br><table><tr><th>項目</th><th>結果</th></tr><tr><td>原始告警</td><td>10</td></tr><tr><td>去重收斂後</td><td>7</td></tr><tr><td>嚴重度</td><td>P1=5、P2=1、P3=1</td></tr><tr><td>收斂比例</td><td>30%</td></tr></table><br>已達 P1 通報條件；正式環境可串接 Email / Line / Telegram。<span class="mini">DEMO · 不實際寄送</span>`,
+        '幫我看攻擊路徑':`🕸️ <b>攻擊鏈摘要</b><br><br><b>FILE-SRV03：</b><br>14:20 Suspicious PowerShell Execution<br>→ 14:22 Mimikatz.gen（Credential Access）<br>→ 14:25 Privilege Escalation Attempt<br><br><b>意圖：</b>執行 → 憑證竊取 → 提權<br><b>影響範圍：</b>目前鎖定單一主機<br><b>橫向移動：</b>尚無跨主機證據，但已進展至提權階段，建議交由端點安全專家進一步隔離與溯源。<span class="mini">DEMO · 僅依模擬 SIEM/EDR 關聯</span>`,
+        '建立每小時威脅巡檢':`✅ 已模擬建立「每小時威脅監控巡檢」。<br><br><b>來源：</b>SIEM + S1EDR<br><b>流程：</b>去重收斂 → 誤報過濾 → P1/P2/P3 分級 → 監控摘要待辦<br><b>有 P1：</b>建立一風險一待辦 + 產生通報信<br><b>無 P1：</b>僅回報摘要<br><b>範圍：</b>資安監控角色不執行隔離/斷網/清除。<span class="mini">DEMO · 未建立真實排程</span>`,
+        '建立 P1 即時告警':`🚨 已模擬建立「P1 即時告警」。<br><br><b>條件：</b>事件分級為 P1<br><b>動作：</b>建立威脅處置待辦 + 產生通報摘要<br><b>通知：</b>Email / LINE / Telegram（依租戶設定）<br><b>接手：</b>需隔離或清除時交由端點安全專家。<span class="mini">DEMO · 未建立真實告警</span>`
+      }
+    },
+    compliance:{
+      title:'法遵專家', avatar:'⚖️', desc:'ISO 27001 · 弱點管理與合規缺口追蹤',
+      skills:['點數／進度查詢','弱點掃描報告','ISO 27001缺口','改善與複掃','定期合規巡檢'],
+      intro:'👑師傅🤔，我是法遵專家。我可以把弱點掃描記錄、報告與管理證據對照 ISO 27001 控制項，整理合規狀態、缺口與改善追蹤；這裡是 DEMO，不會建立真實掃描或寄信。',
+      prompts:['你可以做什麼','你不能做什麼','查點數與掃描進度','分析專案 1021829477765696','ISO 27001 合規缺口','模擬整點巡檢'],
+      answers:{
+        '你可以做什麼':`這支<b>法遵專家</b>目前能力如下：<table><tr><th>類別</th><th>能做什麼</th><th>輸出</th></tr><tr><td>點數與進度</td><td>查詢點數餘額、掃描進度及專案記錄</td><td>餘額、狀態、設備數、風險數與執行時間</td></tr><tr><td>弱掃報告</td><td>整理弱點、風險等級、連接埠與修補建議</td><td>精簡弱點清單與損害分析</td></tr><tr><td>合規對照</td><td>把技術證據對照 ISO 27001 控制項</td><td>達成／部分達成／未達成</td></tr><tr><td>缺口分析</td><td>指出閉環證據、簽核、權限與通報留痕缺口</td><td>缺口說明與改善動作</td></tr><tr><td>改善追蹤</td><td>規劃修補、複掃與證據回寫</td><td>短中期改善計畫</td></tr><tr><td>定期巡檢</td><td>依門檻檢查點數、逾期掃描與新增缺口</td><td>巡檢摘要、待辦或通知內容</td></tr></table>`,
+        '你不能做什麼':`這支<b>法遵專家</b>的能力邊界如下：<table><tr><th>不能直接做什麼</th><th>原因／後續方式</th></tr><tr><td>直接宣告通過 ISO 27001 認證</td><td>只能做缺口盤點；正式認證仍須由合格驗證機構執行</td></tr><tr><td>把推論當成稽核證據</td><td>缺少複掃、簽核、寄送日誌或權限資料時會明確標示證據不足</td></tr><tr><td>未經確認建立掃描或高風險變更</td><td>建立掃描屬需確認操作，應保留工單或電子簽核</td></tr><tr><td>直接修補主機弱點</td><td>提供改善建議與複掃計畫，由授權維護人員執行</td></tr><tr><td>保證外部系統與通知一定成功</td><td>正式環境需完成 Email／LINE／Telegram 串接並保留成功日誌</td></tr><tr><td>取代法務、稽核員或管理者最終判定</td><td>輸出供盤點與決策參考，最終結論仍需人工審核</td></tr></table>`,
+        '查點數與掃描進度':`<b>點數餘額</b><table><tr><th>總點數</th><th>已使用</th><th>暫扣</th><th>剩餘</th><th>到期日</th></tr><tr><td>200</td><td>107</td><td>1</td><td>92</td><td>2027-04-30</td></tr></table><br><b>最新一筆掃描進度</b><table><tr><th>專案 ID</th><th>專案名稱</th><th>狀態</th><th>已掃設備</th><th>風險數</th><th>執行時間</th></tr><tr><td>1021829477765696</td><td>2026-08-27 09:14 From Ai Agent</td><td>已完成（報告已生成）</td><td>1/1</td><td>6</td><td>2026-08-27 09:14:46</td></tr></table><br>平台共有 286 筆專案記錄；如需可再依專案 ID、狀態或日期篩選。<span class="mini">DEMO · 附件範例資料</span>`,
+        '分析專案 1021829477765696':`<b>結論：</b>專案 1021829477765696 已完成初掃並產生報告。主機 H-18534（10.40.53.84／Windows 11）發現 0 嚴重、0 高、5 中、1 低風險弱點。<table><tr><th>風險</th><th>弱點</th><th>連接埠</th><th>修補建議</th></tr><tr><td>中</td><td>SSL Certificate Cannot Be Trusted</td><td>3389</td><td>更換正式受信任憑證</td></tr><tr><td>中</td><td>SSL Self-Signed Certificate</td><td>3389</td><td>改用受信任 CA 簽署憑證</td></tr><tr><td>中</td><td>SMB Signing not required</td><td>445</td><td>強制數位簽署通訊</td></tr><tr><td>中</td><td>TLS 1.0 Protocol Detection</td><td>3389</td><td>停用 TLS 1.0，僅保留 1.2／1.3</td></tr><tr><td>中</td><td>TLS 1.1 Deprecated Protocol</td><td>3389</td><td>停用 TLS 1.1，僅保留 1.2／1.3</td></tr><tr><td>低</td><td>ICMP Timestamp Request</td><td>0</td><td>過濾 ICMP 時間戳請求與回覆</td></tr></table><br><b>改善計畫：</b>一週內處理 RDP 憑證與 SMB 簽署；兩週內停用 TLS 1.0／1.1；完成後安排複掃並回寫結果，補齊 ISO 27001 A.8.8 閉環證據。<span class="mini">DEMO · 未實際執行修補或複掃</span>`,
+        'ISO 27001 合規缺口':`截至 2026-08-27 11:32，共辨識 <b>7 項</b>控制缺口：0 項完全達成、3 項部分達成、4 項未達成。<table><tr><th>控制項</th><th>狀態</th><th>主要缺口</th><th>改善動作</th></tr><tr><td>A.8.8 技術弱點管理</td><td>部分達成</td><td>缺少修補後複掃紀錄</td><td>排程複掃並回寫結果</td></tr><tr><td>A.8.24 密碼學控制</td><td>未達成</td><td>TLS 1.0／1.1 與不受信任憑證</td><td>停用舊協定並更換憑證</td></tr><tr><td>A.8.20 網路安全</td><td>未達成</td><td>SMB 未強制簽署</td><td>啟用強制數位簽署</td></tr><tr><td>A.5.24／A.5.26 事件通報</td><td>部分達成</td><td>缺少正式寄送成功日誌</td><td>保留回條與稽核日誌</td></tr><tr><td>A.5.35 獨立審查</td><td>未達成</td><td>無獨立複核簽核</td><td>安排季度複核並留存</td></tr><tr><td>A.8.32 變更管理</td><td>部分達成</td><td>確認停留在對話層級</td><td>導入工單或電子簽核</td></tr><tr><td>A.9.4 存取控制</td><td>未達成</td><td>缺少角色權限分級資訊</td><td>補齊權限對應紀錄</td></tr></table><span class="mini">DEMO · 合規盤點不等同正式認證結論</span>`,
+        '模擬整點巡檢':`<b>2026-08-27 11:00 巡檢結果：</b>點數餘額 92／200（46%），無逾期未完成掃描，本次無新增合規缺口。<br><br>未達發信條件，因此不寄送通知，僅留存本輪巡檢記錄。若要正式啟用，可再設定點數門檻、逾期判定與新缺口通知規則。<span class="mini">DEMO · 未建立真實排程或寄送通知</span>`
+      }
+    },
+    custom:{
+      title:'自建立技能', avatar:'🧩', desc:'企業自有 Skill · 專業版功能',
+      skills:['Skill 上傳','Skill 拆分','部門職能包','建立待辦','定時任務','告警通知'],
+      intro:'自建立 Skill 可把企業自己的 SOP、Prompt、資料來源與執行規則拆成不同技能，再組合到專屬 Agent 中。',
+      prompts:[], answers:{}
+    }
+  };
+  let current='itops', busy=false;
+  const mask=document.getElementById('agentSimMask'), chat=document.getElementById('agentChat'), suggest=document.getElementById('agentSuggest');
+  if(!mask||!chat||!suggest) return;
+  const title=document.getElementById('agentSimTitle'), sideTitle=document.getElementById('agentSimSideTitle'), sideDesc=document.getElementById('agentSimSideDesc'), avatar=document.getElementById('agentSimAvatar'), skills=document.getElementById('agentSimSkills'), input=document.getElementById('agentDemoInput'), send=document.getElementById('agentDemoSend');
+  function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+  function add(role,html,cls=''){
+    const d=document.createElement('div');d.className='msg '+role+(cls?' '+cls:'');
+    d.innerHTML='<div class="mav">'+(role==='user'?'你':DATA[current].avatar)+'</div><div class="bubble">'+html+'</div>';
+    chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d;
+  }
+  function typing(){const d=add('assistant','<i></i><i></i><i></i>','typing');return d;}
+  function tool(msg){add('assistant','⚙ '+esc(msg),'tool');}
+  function setBusy(v){busy=v;input.disabled=v||current==='custom';send.disabled=v||current==='custom';suggest.querySelectorAll('button').forEach(b=>b.disabled=v);}
+  function render(agent){
+    current=agent;const d=DATA[agent];title.textContent=d.title+' · 體驗';sideTitle.textContent=d.title;sideDesc.textContent=d.desc;avatar.textContent=d.avatar;
+    skills.innerHTML=d.skills.map(x=>'<span>'+esc(x)+'</span>').join('');chat.innerHTML='';suggest.innerHTML='';
+    add('assistant',d.intro);
+    if(agent==='custom'){
+      add('assistant','<div class="agent-upgrade"><h3>自建立技能需 Agent Space 專業版</h3><p>升級後可把企業內部 SOP、Prompt 與流程拆成可管理的 Skill，再依部門或情境組合到不同 Agent。</p><ul><li>上傳既有 Skill / 規範檔</li><li>拆分成 IT、資安、人資、業務、財會、生管等獨立技能</li><li>建立專屬技能庫並由 Agent 呼叫</li><li>建立後可同樣串接待辦、定時任務與告警通知</li><li>搭配權限、企業知識、記憶與多模型持續擴充</li></ul><span class="protag">PROFESSIONAL EDITION</span></div>');
+      input.placeholder='此功能需購買專業版';setBusy(false);return;
+    }
+    d.prompts.forEach(p=>{const b=document.createElement('button');b.type='button';b.textContent=p;b.addEventListener('click',()=>ask(p));suggest.appendChild(b);});
+    input.placeholder='也可以輸入自己的問題（DEMO 會依專家能力回應）';setBusy(false);
+  }
+  function generic(q){
+    if(current==='itops') return `已收到「${esc(q)}」。在正式環境中，我會先透過 IT 運維技能確認查詢範圍，再以唯讀方式取得設備預警 / 案件資料並整理結果。此 DEMO 不連正式 API。`;
+    if(current==='endpoint') return `已收到「${esc(q)}」。我可以往 EDR 事件列表、受影響設備、風險摘要、隔離/掃描建議與事件報告方向處理；此 DEMO 不執行真實端點處置。`;
+    if(current==='compliance') return `已收到「${esc(q)}」。我可以從弱掃點數、專案進度、弱點報告、ISO 27001 控制項、改善與複掃證據方向協助盤點；此 DEMO 不建立真實掃描、不寄信，也不取代正式驗證。`;
+    return `已收到「${esc(q)}」。我會依 SIEM + S1EDR 告警進行收斂、P1/P2/P3 分級與攻擊鏈摘要；需要隔離或清除時會交由端點安全專家接手。此 DEMO 不會真的通報或建待辦。`;
+  }
+  function ask(q){
+    if(busy||!q.trim()||current==='custom')return;setBusy(true);add('user',esc(q));input.value='';
+    const t=typing();setTimeout(()=>{t.remove();tool(current==='soc'?'正在關聯 SIEM / S1EDR 訊號…':current==='endpoint'?'正在讀取 EDR 事件與端點狀態…':current==='compliance'?'正在對照弱掃證據與 ISO 27001 控制項…':'正在查詢 IT 事件與設備預警…');
+      setTimeout(()=>{const last=chat.lastElementChild;if(last&&last.classList.contains('tool'))last.remove();let ans=DATA[current].answers[q]||generic(q);if(current==='endpoint'&&(q==='你可以做什麼'||q==='你不能做什麼'))ans+=`<br><b>鼎新 MDR 服務補充：</b>若客戶已購買鼎新 MDR，目前由鼎新於上班時間提供 <b>5×8 協助</b>，包含問題詢問與一鍵還原；服務時段外及其他處置範圍仍依實際合約與服務窗口為準。`;add('assistant',ans);setBusy(false);},650);
+    },520);
+  }
+  document.querySelectorAll('[data-agent-demo]').forEach(b=>b.addEventListener('click',()=>{mask.hidden=false;document.body.style.overflow='hidden';render(b.dataset.agentDemo);setTimeout(()=>input.focus(),60);}));
+  document.getElementById('agentSimClose').addEventListener('click',()=>{mask.hidden=true;document.body.style.overflow='';});
+  document.getElementById('agentSimReset').addEventListener('click',()=>render(current));
+  mask.addEventListener('click',e=>{if(e.target===mask){mask.hidden=true;document.body.style.overflow='';}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mask.hidden){mask.hidden=true;document.body.style.overflow='';}});
+  send.addEventListener('click',()=>ask(input.value));input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ask(input.value);}});
+})();
+</script>
+<script id="cxNeedsScript">
+(function(){
+  var D={"goals": [{"id": "audit", "expert": "gov", "title": "要過稽核、要出合規證據", "badge": "合規", "soonEta": null, "phase": "事前", "chips": ["自動化弱點掃描", "報告分析", "對應法規"], "desc": "自動把弱掃與處置紀錄映射成 ISO 27001 證據，持續監控合規缺口，大幅減少稽核季找資料與對條文的人工。"}, {"id": "data", "expert": "data", "title": "資料保護與還原沒把握", "badge": "開發中", "soonEta": "2026Q4 即將上線", "phase": "事前", "chips": null, "desc": "敏感資料分類、加密與 DLP 狀態、備份完整性與 RTO/RPO 可達成性；用自然語言確認備份排程有沒有跑、備份完不完整、還原點可不可用，不用登入備份主控台一項項翻。"}, {"id": "ops", "expert": "itops", "title": "要用問的就查到維運數據", "badge": "維運", "soonEta": null, "phase": "事中", "chips": ["資訊設備巡檢&告警", "事件處理進度追蹤(需鼎新硬體維護合約)"], "desc": "用自然語言查主機、網路、儲存與 PC/NB 的設備異常與事件告警，並透過 7×24 自動巡檢、異常通報與定時報告提前發現風險。"}, {"id": "watch", "expert": "mon", "title": "只要看得到威脅", "badge": "監看分類", "soonEta": null, "phase": "事中", "chips": ["資安監控事件分類&告警&溯源"], "desc": "24×7 自動巡檢資安告警，自動降噪、分級與 P1 通報，讓人力從全時盯畫面改為只處理例外。"}, {"id": "block", "expert": "ep", "title": "要能即時阻擋", "badge": "處置", "soonEta": null, "phase": "事中", "chips": ["即時阻擋威脅", "巡檢資安事件&告警", "自動化處理後續資安事件", "一鍵修復"], "desc": "唯一可自動走完「偵測 → 隔離 → 端點溯源 → 清除 → 復原 → 報告留痕」的專家。"}, {"id": "net", "expert": "net", "title": "防火牆與網路要有人管", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "防火牆規則基線、網路分段策略與 VPN 存取授權的變更治理。"}, {"id": "iam", "expert": "iam", "title": "帳號權限要盤點", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "離職帳號、特權帳號共用、最小權限與 MFA/PAM/SoD 符合度。"}, {"id": "cloud", "expert": "cloud", "title": "雲端設定沒人檢查", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "雲端組態基線符合率、CSPM 稽核覆蓋度與公開暴露風險。"}, {"id": "airisk", "expert": "ai", "title": "員工亂用 AI 怕外流", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "AI 使用規範覆蓋率、Prompt 注入控管與 AI 用例審批盤點。"}], "guide": {"gov": {"one": "把技術控制與專家執行紀錄，轉成稽核看得懂、找得到的證據。", "main": "證據盤點與 ISO 27001 控制對照、合規缺口監控、弱掃平台操作。", "secondary": "可查弱掃點數、建立掃描、查進度與報告；建立前會先出確認摘要。", "loop": "部分閉環", "loopClass": "soon", "loopText": "可從弱掃啟動預防週期，並承接其他專家的處置紀錄形成合規證據；但一鍵稽核資料包尚在開發、法規異動對照尚未開始。", "boundary": "不做 EDR、SIEM、備份或任何處置動作；判斷通報交給資安監控，動手處置交給端點安全。", "detail": "主要解決稽核季四處找資料的痛點。單獨導入可做弱掃與合規盤點；與其他專家組合時，價值在於把全鏈路執行軌跡回寫為稽核證據。"}, "mon": {"one": "負責「有沒有事」與「有多急」：把告警降噪、分級後通報，但不動手。", "main": "24/7 日誌整合監控、告警初判分級、P1 通報、攻擊路徑白話文重組。", "secondary": "偵測規則調校、弱點技術確認、修補進度追蹤與下一輪複掃安排。", "loop": "停在判斷與通報", "loopClass": "soon", "loopText": "能走完偵測 → 降噪 → 分級 → 通報，但不會隔離、斷網或刪除惡意程式；要完成處置閉環需串接端點安全專家。", "boundary": "需 MDR 或 SIEM 日誌來源。沒有日誌就沒有分析對象；隔離與清除動作由端點安全專家接手。", "detail": "核心價值是解決告警疲勞，讓人員從全時盯畫面改為例外處理。輸出固定為結論、主要理由、下一步動作，可直接貼進工單。"}, "ep": {"one": "唯一能從偵測一路走到隔離、清除、復原與留痕的處置型專家。", "main": "端點盤點、修補優先排序、EDR 網路隔離與圍堵、端點溯源清除、解除隔離。", "secondary": "修補前快照、修補後複掃、異常回滾、ISO 27001 報告與稽核留痕。", "loop": "完整處置閉環", "loopClass": "ready", "loopText": "偵測 → 隔離 → 端點溯源 → 清除 → 複查 → 解除隔離 → 合規報告與留痕，是目前能走完整段事件生命週期的專家。", "boundary": "隔離是高衝擊動作，導入初期建議設人工核准。需已部署 EDR/補丁管理並開放 API；跨來源日誌降噪仍由資安監控專家負責。", "detail": "主要處理端點事件與修補驗證。成功、失敗或被條件阻擋都會建待辦並留下稽核軌跡，處置報告是流程自然產出的結果。"}, "itops": {"one": "用自然語言就能查 IT 設備狀態，並透過自動化巡檢實現 7×24 小時異常告警與定時報告。", "main": "自動巡檢 Ai智管家納管的主機、伺服器、NAS、網路、UPS 與 PC/NB；異常時主動告警通報。", "secondary": "可以直接問「哪些伺服器 CPU 過高？」「磁碟快滿的設備有哪些？」「昨天有哪些設備離線？」「幫我整理本週巡檢報告」。", "loop": "查詢層不形成閉環", "loopClass": "soon", "loopText": "目前技能層做唯讀查詢；要判斷「有多急」交給資安監控，要動手處置交給端點安全。派工與次期回驗閉環仍在開發排程。", "boundary": "相關資安事件可以查詢(EDR/SIEM 事件、維運案件)，但無法分類事件的高/中/低風險——判斷「有多急」要交給資安監控專家。不做任何寫入與處置。必須有 Ai智管家–IT運維模組；iMA 影響鼎新立案後續維運支援。", "detail": "客戶不用登入多個監控畫面逐台查詢，可用一句話查設備清單、CPU/記憶體/磁碟容量、離線與異常狀態，也可安排每日、每週自動巡檢與報告。直接效益是讓 IT 人員從「一直盯畫面」轉為「只處理系統主動找出的異常」，提前發現容量、效能與設備離線風險。目前能力邊界是監控、查詢、巡檢、告警與報告；不自動判斷資安事件嚴重度，也不會自動隔離或修改設備。"}, "data": {"one": "專門回答「備份真的救得回來嗎？」，把備份成功進一步驗證成可還原。", "main": "查詢備份狀態、定期備份排程，並觸發既有的備份完整性驗證流程。", "secondary": "備份健康監控、還原驗證、RTO/RPO 報告、敏感資料盤點與勒索復原屬持續開發。", "loop": "現有驗證流程可完成", "loopClass": "soon", "loopText": "可排程觸發既有的完整性驗證，但不能新建/修改備份排程，也不能執行單次備份；完整的災難復原閉環尚未交付。", "boundary": "目前主要是查詢與驗證，不可承諾排程設定、單次備份、DLP 或勒索一鍵復原。整包仍屬開發中。", "detail": "單獨導入的價值是提前發現備份失敗。與端點安全組合時，可在高衝擊處置前提供已驗證的還原點與備份可用性作為後盾。"}, "net": {"one": "專注防火牆規則、網路分段與 VPN 存取的安全變更治理。", "main": "網路架構安全、邊界存取控制與組態基線檢查。", "secondary": "預定納入防火牆規則盤點、變更追蹤、VPN 授權合規。", "loop": "開發中", "loopClass": "soon", "loopText": "目前工具、Skill 與自動處置邊界待定義，尚不能確認完整閉環。", "boundary": "尚無法下單，不可承諾自動修改防火牆規則。", "detail": "此為總覽所載的產品定位，實際交付能力、工具來源與核准機制尚待產品單位定義。"}, "iam": {"one": "管好帳號從加入到離開的生命週期，降低過度授權與特權風險。", "main": "最小權限、MFA/PAM/SoD 合規與數位身分生命週期治理。", "secondary": "預定盤點離職帳號、共用特權帳號、權限累積與職務衝突。", "loop": "開發中", "loopClass": "soon", "loopText": "目前尚未定義帳號停用與權限收回的執行閉環。", "boundary": "尚無法下單，不可承諾自動停權或寫入 AD/IAM。", "detail": "此為預定產品定位；資料來源、審批流程與寫入權限尚待定義。"}, "cloud": {"one": "連續檢查雲端組態基線、公開暴露與跨雲安全一致性。", "main": "AWS/Azure/GCP 雲端組態基線、CSPM 稽核與最小存取權限監控。", "secondary": "預定維護跨雲平台的組態一致性與公開暴露風險清單。", "loop": "開發中", "loopClass": "soon", "loopText": "目前僅有治理定位，自動修復與變更回驗閉環尚未定義。", "boundary": "尚無法下單；雲端帳號、CSPM 工具與寫入權限均待確認。", "detail": "後續需明確區分唯讀稽核、建議修正與實際套用變更三個權限等級。"}, "ai": {"one": "治理企業 AI 用例、Prompt 注入、輸出安全與資料隱私風險。", "main": "AI 使用規範覆蓋率、Prompt 注入風險控管與模型輸出合規監控。", "secondary": "預定維護 AI 用例審批基準、資料隱私保護狀態與例外追蹤。", "loop": "開發中", "loopClass": "soon", "loopText": "目前尚未定義從發現風險到阻擋、審批、回驗的完整閉環。", "boundary": "尚無法下單，不可承諾對所有 AI 工具進行即時阻擋。", "detail": "此為總覽中的產品定位；實際感測點、政策執行點與審批工作流程尚待定義。"}}, "names": {"gov": "法規遵循專家", "mon": "資安監控專家", "ep": "端點安全專家", "net": "網路維護專家", "iam": "身份存取專家", "data": "資料安全專家", "cloud": "雲端資安專家", "ai": "AI 風險專家", "itops": "IT 運維專家"}, "icons": {"gov": "⚖️", "mon": "📡", "ep": "🛡️", "net": "🌐", "iam": "🔑", "data": "💾", "cloud": "☁️", "ai": "🤖", "itops": "🖥️"}};
+  var sel=[];
+  var esc=function(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+  var soon=function(g){return g.badge==='開發中';};
+  var gBox=document.getElementById('cxGoals'), eBox=document.getElementById('cxExpertBox');
+  function renderGoals(){
+    gBox.innerHTML=D.goals.map(function(g){
+      var on=sel.indexOf(g.id)>=0;
+      return '<button type="button" class="cx-goal'+(on?' on':'')+'" data-g="'+g.id+'" aria-pressed="'+on+'">'+
+        '<div class="t"><span class="ck">'+(on?'✓':'')+'</span><span>'+esc(g.title)+'</span></div>'+
+        '<div><span class="bd'+(soon(g)?' soon':'')+'">'+esc(soon(g)?(g.soonEta||'開發中'):g.badge)+'</span></div>'+
+        (g.chips&&g.chips.length?'<div class="chips">'+g.chips.map(function(c){return '<span>'+esc(c)+'</span>';}).join('')+'</div>':'')+
+        '<div class="d">'+esc(g.desc)+'</div>'+
+        '<div class="x">→ '+esc(D.names[g.expert]||'')+(soon(g)?'（開發中）':'')+'</div></button>';
+    }).join('');
+  }
+  function renderExperts(){
+    if(!sel.length){eBox.innerHTML='<div class="cx-empty">請先在上方「您想解決什麼？」點選需求，這裡會帶出對應的專家說明。</div>';return;}
+    var order=[], forMap={};
+    D.goals.forEach(function(g){ if(sel.indexOf(g.id)<0) return; if(order.indexOf(g.expert)<0) order.push(g.expert); (forMap[g.expert]=forMap[g.expert]||[]).push(g); });
+    eBox.innerHTML=order.map(function(k){
+      var G=D.guide[k]||{}, gs=forMap[k], isSoon=gs.some(soon), eta=(gs.filter(function(g){return g.soonEta;})[0]||{}).soonEta;
+      var chips=[]; gs.forEach(function(g){(g.chips||[]).forEach(function(c){if(chips.indexOf(c)<0)chips.push(c);});});
+      return '<article class="cx-exp"><div class="cx-exp-hd"><div class="av">'+(D.icons[k]||'🤖')+'</div><div>'+
+        '<h3>'+esc(D.names[k])+'<span class="st'+(isSoon?' soon':'')+'">'+(isSoon?esc(eta||'開發中'):'已上線')+'</span></h3>'+
+        '<p class="one">'+esc(G.one)+'</p>'+
+        '<div class="for">'+gs.map(function(g){return '<span>對應需求：'+esc(g.title)+'</span>';}).join('')+chips.map(function(c){return '<span>'+esc(c)+'</span>';}).join('')+'</div>'+
+        '</div></div><div class="cx-exp-bd">'+
+        (G.main?'<div><b>主要能力</b>'+esc(G.main)+'</div>':'')+
+        (G.secondary?'<div><b>也可以協助</b>'+esc(G.secondary)+'</div>':'')+
+        (G.loopText?'<div class="loop"><b>處理範圍'+(G.loop?'<span class="lp'+(G.loopClass==='ready'?' ready':'')+'">'+esc(G.loop)+'</span>':'')+'</b>'+esc(G.loopText)+'</div>':'')+
+        (G.boundary?'<div><b>能力邊界與前提</b>'+esc(G.boundary)+'</div>':'')+
+        (G.detail?'<div class="wide"><b>可以帶來什麼</b>'+esc(G.detail)+'</div>':'')+
+        '</div></article>';
+    }).join('');
+  }
+  gBox.addEventListener('click',function(e){
+    var b=e.target.closest('.cx-goal'); if(!b) return;
+    var id=b.getAttribute('data-g'), i=sel.indexOf(id);
+    if(i>=0) sel.splice(i,1); else sel.push(id);
+    renderGoals(); renderExperts();
+  });
+  renderGoals(); renderExperts();
+})();
+</script>
+</body>
+</html>
