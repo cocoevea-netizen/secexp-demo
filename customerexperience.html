@@ -883,67 +883,6 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
   </section>
   
 
-  <section class="cx-block" id="cxNeeds">
-    <div class="cx-sec-hd"><span class="no">STEP 2</span><h2>您想解決什麼？</h2></div>
-    <div class="sub">點選符合您情況的需求（可複選），下方會帶出對應的資安數智專家說明。多選時，各專家能力可以疊加，形成更完整的自動化閉環。</div>
-    <div class="cx-goals" id="cxGoals"></div>
-    <div class="cx-combo"><details class="techfold" id="comboRefDiagram"><summary>多位專家組合起來，會是什麼樣子？（事前 → 事中偵測 → 處置 → 稽核留痕）</summary><div class="tf-body">
-        <div class="flowmap">
-          <div class="flowmap-hd">
-            <h4>專家可以怎麼組合？——依事件生命週期串接</h4>
-            <p>多選需求時系統會帶出對應的多位專家；下面是這些專家依「事前預防 → 事中偵測 → 處置 → 稽核留痕」串成的自動化流程，每一段都可用自然語言驅動。</p>
-          </div>
-
-          <div class="flowphase">
-            <div class="flowphase-t"><span class="ph">事前 · 預防與治理</span><span class="sub">定期執行，降低事件發生機率與稽核成本</span><span class="auto">可自動化</span></div>
-            <div class="flowrow">
-              <div class="flowcard"><span class="fx">法規遵循專家</span><span class="fr">掃描週期與稽核季</span>
-                <ul><li>弱掃點數/對象/範圍確認</li><li>掃描報告產出與進度</li><li>弱點內容與修補建議</li><li>ISO 27001 合規缺口對照</li></ul>
-                <div class="fask"><b>客戶可以這樣問</b>「目前 ISO 27001 哪些控制項缺少證據？」<br>「這次弱掃還有多少點數，可以掃哪些對象？」</div></div>
-              <div class="flowcard"><span class="fx">資料安全專家</span><span class="fr">備份負責人的一週</span>
-                <ul><li>備份工作與失敗紀錄確認</li><li>目前排定的備份排程</li><li>執行備份完整性驗證</li><li>還原點/儲存庫健康檢查</li></ul>
-                <div class="fask"><b>客戶可以這樣問</b>「昨天有哪些備份工作失敗或逾期？」<br>「請執行既有的備份完整性驗證並回傳結果。」</div></div>
-            </div>
-          </div>
-
-          <div class="flowsep">事件發生</div>
-
-          <div class="flowphase">
-            <div class="flowphase-t"><span class="ph">事中 · 偵測與處置</span><span class="sub">巡檢 → 判斷通報 → 隔離處置 → 合規留痕</span><span class="auto">可自動化</span></div>
-            <div class="flowrow flowchain">
-              <div class="flowcard"><span class="fx">IT運維專家</span><span class="fr">服務窗口的日常</span>
-                <ul><li>案件現在狀態與處理進度</li><li>近期事件列表</li><li>昨天的 EDR/SIEM 事件(可查、不分風險等級)</li><li>本月風險報告</li></ul>
-                <div class="fask"><b>客戶可以這樣問</b>「哪些伺服器 CPU 或記憶體持續過高？」<br>「昨天有哪些 EDR/SIEM 事件或維運案件？」</div></div>
-              <div class="flowcard"><span class="fx">資安監控專家</span><span class="fr">值班同仁的一天</span>
-                <ul><li>過夜告警分級摘要</li><li>攻擊路徑與影響範圍判讀</li><li>弱掃修補優先級(CVE 分級)</li><li>初複掃結果與待辦追蹤</li></ul>
-                <div class="fask"><b>客戶可以這樣問</b>「昨天有哪些需要通報的 P1 事件？」<br>「這筆告警的攻擊路徑與影響範圍是什麼？」</div></div>
-              <div class="flowcard"><span class="fx">端點安全專家</span><span class="fr">事故發生的兩小時</span>
-                <ul><li>高風險預警整理成待辦</li><li>隔離威脅、中斷橫向擴散</li><li>端點溯源分析+全機掃描</li><li>合規報告+處置順序留痕</li></ul>
-                <div class="fask"><b>客戶可以這樣問</b>「請隔離這台高風險端點並建立待辦。」<br>「請產出這次事件的執行摘要與 ISO 27001 報告。」</div></div>
-            </div>
-          </div>
-
-          <div class="flowphase">
-            <div class="flowphase-t"><span class="ph">同時導入多位專家 · 客戶可以這樣問</span><span class="sub">一句話跨專家串起「判斷 → 處置 → 留痕」</span></div>
-            <ul class="flowcombo">
-              <li><span class="cq">「這筆告警的攻擊路徑是什麼？先隔離受影響端點，再產出這次事件的 ISO 27001 合規報告。」</span><span class="ce">資安監控 → 端點安全 → 法規遵循</span></li>
-              <li><span class="cq">「要隔離這台高風險主機之前，先確認它有沒有可用的還原點與完整備份。」</span><span class="ce">端點安全 + 資料安全</span></li>
-              <li><span class="cq">「昨天巡檢發現的異常，幫我判斷嚴重度，需要的話直接隔離並建立待辦。」</span><span class="ce">IT運維 → 資安監控 → 端點安全</span></li>
-              <li><span class="cq">「這季稽核要的證據，把這段時間的偵測、處置與備份驗證紀錄整理成一份對照 ISO 27001 的資料包。」</span><span class="ce">法規遵循 + 資安監控 + 端點安全 + 資料安全</span></li>
-            </ul>
-          </div>
-
-          <div class="flowmap-ft"><b>組合後成果：</b>單獨導入任一位專家即可運作；<b>同時導入時，事前的預防紀錄與事中的偵測、處置軌跡會自動串成同一條合規證據鏈</b>，形成 24 小時無人化的資安閉環。</div>
-        </div>
-        </div></details></div>
-  </section>
-
-  <section class="cx-block" id="cxExperts">
-    <div class="cx-sec-hd"><span class="no">STEP 3</span><h2>適合您的專家</h2></div>
-    <div class="sub">依您在上方選擇的需求，帶出對應的專家與能力說明；可同時需要多位專家。</div>
-    <div class="cx-experts" id="cxExpertBox"></div>
-  </section>
-
   <section class="cx-block cx-arch" id="cxArch">
     <h2>整體協作架構</h2>
     <div class="sub">企業使用者、數智分身、多智能體平台、Ai 智管家平台、資訊設備在可視化平台全域協作</div>
@@ -1095,53 +1034,6 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
   mask.addEventListener('click',e=>{if(e.target===mask){mask.hidden=true;document.body.style.overflow='';}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mask.hidden){mask.hidden=true;document.body.style.overflow='';}});
   send.addEventListener('click',()=>ask(input.value));input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ask(input.value);}});
-})();
-</script>
-<script id="cxNeedsScript">
-(function(){
-  var D={"goals": [{"id": "audit", "expert": "gov", "title": "要過稽核、要出合規證據", "badge": "合規", "soonEta": null, "phase": "事前", "chips": ["自動化弱點掃描", "報告分析", "對應法規"], "desc": "自動把弱掃與處置紀錄映射成 ISO 27001 證據，持續監控合規缺口，大幅減少稽核季找資料與對條文的人工。"}, {"id": "data", "expert": "data", "title": "資料保護與還原沒把握", "badge": "開發中", "soonEta": "2026Q4 即將上線", "phase": "事前", "chips": null, "desc": "敏感資料分類、加密與 DLP 狀態、備份完整性與 RTO/RPO 可達成性；用自然語言確認備份排程有沒有跑、備份完不完整、還原點可不可用，不用登入備份主控台一項項翻。"}, {"id": "ops", "expert": "itops", "title": "要用問的就查到維運數據", "badge": "維運", "soonEta": null, "phase": "事中", "chips": ["資訊設備巡檢&告警", "事件處理進度追蹤(需鼎新硬體維護合約)"], "desc": "用自然語言查主機、網路、儲存與 PC/NB 的設備異常與事件告警，並透過 7×24 自動巡檢、異常通報與定時報告提前發現風險。"}, {"id": "watch", "expert": "mon", "title": "只要看得到威脅", "badge": "監看分類", "soonEta": null, "phase": "事中", "chips": ["資安監控事件分類&告警&溯源"], "desc": "24×7 自動巡檢資安告警，自動降噪、分級與 P1 通報，讓人力從全時盯畫面改為只處理例外。"}, {"id": "block", "expert": "ep", "title": "要能即時阻擋", "badge": "處置", "soonEta": null, "phase": "事中", "chips": ["即時阻擋威脅", "巡檢資安事件&告警", "自動化處理後續資安事件", "一鍵修復"], "desc": "唯一可自動走完「偵測 → 隔離 → 端點溯源 → 清除 → 復原 → 報告留痕」的專家。"}, {"id": "net", "expert": "net", "title": "防火牆與網路要有人管", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "防火牆規則基線、網路分段策略與 VPN 存取授權的變更治理。"}, {"id": "iam", "expert": "iam", "title": "帳號權限要盤點", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "離職帳號、特權帳號共用、最小權限與 MFA/PAM/SoD 符合度。"}, {"id": "cloud", "expert": "cloud", "title": "雲端設定沒人檢查", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "雲端組態基線符合率、CSPM 稽核覆蓋度與公開暴露風險。"}, {"id": "airisk", "expert": "ai", "title": "員工亂用 AI 怕外流", "badge": "開發中", "soonEta": null, "phase": null, "chips": null, "desc": "AI 使用規範覆蓋率、Prompt 注入控管與 AI 用例審批盤點。"}], "guide": {"gov": {"one": "把技術控制與專家執行紀錄，轉成稽核看得懂、找得到的證據。", "main": "證據盤點與 ISO 27001 控制對照、合規缺口監控、弱掃平台操作。", "secondary": "可查弱掃點數、建立掃描、查進度與報告；建立前會先出確認摘要。", "loop": "部分閉環", "loopClass": "soon", "loopText": "可從弱掃啟動預防週期，並承接其他專家的處置紀錄形成合規證據；但一鍵稽核資料包尚在開發、法規異動對照尚未開始。", "boundary": "不做 EDR、SIEM、備份或任何處置動作；判斷通報交給資安監控，動手處置交給端點安全。", "detail": "主要解決稽核季四處找資料的痛點。單獨導入可做弱掃與合規盤點；與其他專家組合時，價值在於把全鏈路執行軌跡回寫為稽核證據。"}, "mon": {"one": "負責「有沒有事」與「有多急」：把告警降噪、分級後通報，但不動手。", "main": "24/7 日誌整合監控、告警初判分級、P1 通報、攻擊路徑白話文重組。", "secondary": "偵測規則調校、弱點技術確認、修補進度追蹤與下一輪複掃安排。", "loop": "停在判斷與通報", "loopClass": "soon", "loopText": "能走完偵測 → 降噪 → 分級 → 通報，但不會隔離、斷網或刪除惡意程式；要完成處置閉環需串接端點安全專家。", "boundary": "需 MDR 或 SIEM 日誌來源。沒有日誌就沒有分析對象；隔離與清除動作由端點安全專家接手。", "detail": "核心價值是解決告警疲勞，讓人員從全時盯畫面改為例外處理。輸出固定為結論、主要理由、下一步動作，可直接貼進工單。"}, "ep": {"one": "唯一能從偵測一路走到隔離、清除、復原與留痕的處置型專家。", "main": "端點盤點、修補優先排序、EDR 網路隔離與圍堵、端點溯源清除、解除隔離。", "secondary": "修補前快照、修補後複掃、異常回滾、ISO 27001 報告與稽核留痕。", "loop": "完整處置閉環", "loopClass": "ready", "loopText": "偵測 → 隔離 → 端點溯源 → 清除 → 複查 → 解除隔離 → 合規報告與留痕，是目前能走完整段事件生命週期的專家。", "boundary": "隔離是高衝擊動作，導入初期建議設人工核准。需已部署 EDR/補丁管理並開放 API；跨來源日誌降噪仍由資安監控專家負責。", "detail": "主要處理端點事件與修補驗證。成功、失敗或被條件阻擋都會建待辦並留下稽核軌跡，處置報告是流程自然產出的結果。"}, "itops": {"one": "用自然語言就能查 IT 設備狀態，並透過自動化巡檢實現 7×24 小時異常告警與定時報告。", "main": "自動巡檢 Ai智管家納管的主機、伺服器、NAS、網路、UPS 與 PC/NB；異常時主動告警通報。", "secondary": "可以直接問「哪些伺服器 CPU 過高？」「磁碟快滿的設備有哪些？」「昨天有哪些設備離線？」「幫我整理本週巡檢報告」。", "loop": "查詢層不形成閉環", "loopClass": "soon", "loopText": "目前技能層做唯讀查詢；要判斷「有多急」交給資安監控，要動手處置交給端點安全。派工與次期回驗閉環仍在開發排程。", "boundary": "相關資安事件可以查詢(EDR/SIEM 事件、維運案件)，但無法分類事件的高/中/低風險——判斷「有多急」要交給資安監控專家。不做任何寫入與處置。必須有 Ai智管家–IT運維模組；iMA 影響鼎新立案後續維運支援。", "detail": "客戶不用登入多個監控畫面逐台查詢，可用一句話查設備清單、CPU/記憶體/磁碟容量、離線與異常狀態，也可安排每日、每週自動巡檢與報告。直接效益是讓 IT 人員從「一直盯畫面」轉為「只處理系統主動找出的異常」，提前發現容量、效能與設備離線風險。目前能力邊界是監控、查詢、巡檢、告警與報告；不自動判斷資安事件嚴重度，也不會自動隔離或修改設備。"}, "data": {"one": "專門回答「備份真的救得回來嗎？」，把備份成功進一步驗證成可還原。", "main": "查詢備份狀態、定期備份排程，並觸發既有的備份完整性驗證流程。", "secondary": "備份健康監控、還原驗證、RTO/RPO 報告、敏感資料盤點與勒索復原屬持續開發。", "loop": "現有驗證流程可完成", "loopClass": "soon", "loopText": "可排程觸發既有的完整性驗證，但不能新建/修改備份排程，也不能執行單次備份；完整的災難復原閉環尚未交付。", "boundary": "目前主要是查詢與驗證，不可承諾排程設定、單次備份、DLP 或勒索一鍵復原。整包仍屬開發中。", "detail": "單獨導入的價值是提前發現備份失敗。與端點安全組合時，可在高衝擊處置前提供已驗證的還原點與備份可用性作為後盾。"}, "net": {"one": "專注防火牆規則、網路分段與 VPN 存取的安全變更治理。", "main": "網路架構安全、邊界存取控制與組態基線檢查。", "secondary": "預定納入防火牆規則盤點、變更追蹤、VPN 授權合規。", "loop": "開發中", "loopClass": "soon", "loopText": "目前工具、Skill 與自動處置邊界待定義，尚不能確認完整閉環。", "boundary": "尚無法下單，不可承諾自動修改防火牆規則。", "detail": "此為總覽所載的產品定位，實際交付能力、工具來源與核准機制尚待產品單位定義。"}, "iam": {"one": "管好帳號從加入到離開的生命週期，降低過度授權與特權風險。", "main": "最小權限、MFA/PAM/SoD 合規與數位身分生命週期治理。", "secondary": "預定盤點離職帳號、共用特權帳號、權限累積與職務衝突。", "loop": "開發中", "loopClass": "soon", "loopText": "目前尚未定義帳號停用與權限收回的執行閉環。", "boundary": "尚無法下單，不可承諾自動停權或寫入 AD/IAM。", "detail": "此為預定產品定位；資料來源、審批流程與寫入權限尚待定義。"}, "cloud": {"one": "連續檢查雲端組態基線、公開暴露與跨雲安全一致性。", "main": "AWS/Azure/GCP 雲端組態基線、CSPM 稽核與最小存取權限監控。", "secondary": "預定維護跨雲平台的組態一致性與公開暴露風險清單。", "loop": "開發中", "loopClass": "soon", "loopText": "目前僅有治理定位，自動修復與變更回驗閉環尚未定義。", "boundary": "尚無法下單；雲端帳號、CSPM 工具與寫入權限均待確認。", "detail": "後續需明確區分唯讀稽核、建議修正與實際套用變更三個權限等級。"}, "ai": {"one": "治理企業 AI 用例、Prompt 注入、輸出安全與資料隱私風險。", "main": "AI 使用規範覆蓋率、Prompt 注入風險控管與模型輸出合規監控。", "secondary": "預定維護 AI 用例審批基準、資料隱私保護狀態與例外追蹤。", "loop": "開發中", "loopClass": "soon", "loopText": "目前尚未定義從發現風險到阻擋、審批、回驗的完整閉環。", "boundary": "尚無法下單，不可承諾對所有 AI 工具進行即時阻擋。", "detail": "此為總覽中的產品定位；實際感測點、政策執行點與審批工作流程尚待定義。"}}, "names": {"gov": "法規遵循專家", "mon": "資安監控專家", "ep": "端點安全專家", "net": "網路維護專家", "iam": "身份存取專家", "data": "資料安全專家", "cloud": "雲端資安專家", "ai": "AI 風險專家", "itops": "IT 運維專家"}, "icons": {"gov": "⚖️", "mon": "📡", "ep": "🛡️", "net": "🌐", "iam": "🔑", "data": "💾", "cloud": "☁️", "ai": "🤖", "itops": "🖥️"}};
-  var sel=[];
-  var esc=function(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
-  var soon=function(g){return g.badge==='開發中';};
-  var gBox=document.getElementById('cxGoals'), eBox=document.getElementById('cxExpertBox');
-  function renderGoals(){
-    gBox.innerHTML=D.goals.map(function(g){
-      var on=sel.indexOf(g.id)>=0;
-      return '<button type="button" class="cx-goal'+(on?' on':'')+'" data-g="'+g.id+'" aria-pressed="'+on+'">'+
-        '<div class="t"><span class="ck">'+(on?'✓':'')+'</span><span>'+esc(g.title)+'</span></div>'+
-        '<div><span class="bd'+(soon(g)?' soon':'')+'">'+esc(soon(g)?(g.soonEta||'開發中'):g.badge)+'</span></div>'+
-        (g.chips&&g.chips.length?'<div class="chips">'+g.chips.map(function(c){return '<span>'+esc(c)+'</span>';}).join('')+'</div>':'')+
-        '<div class="d">'+esc(g.desc)+'</div>'+
-        '<div class="x">→ '+esc(D.names[g.expert]||'')+(soon(g)?'（開發中）':'')+'</div></button>';
-    }).join('');
-  }
-  function renderExperts(){
-    if(!sel.length){eBox.innerHTML='<div class="cx-empty">請先在上方「您想解決什麼？」點選需求，這裡會帶出對應的專家說明。</div>';return;}
-    var order=[], forMap={};
-    D.goals.forEach(function(g){ if(sel.indexOf(g.id)<0) return; if(order.indexOf(g.expert)<0) order.push(g.expert); (forMap[g.expert]=forMap[g.expert]||[]).push(g); });
-    eBox.innerHTML=order.map(function(k){
-      var G=D.guide[k]||{}, gs=forMap[k], isSoon=gs.some(soon), eta=(gs.filter(function(g){return g.soonEta;})[0]||{}).soonEta;
-      var chips=[]; gs.forEach(function(g){(g.chips||[]).forEach(function(c){if(chips.indexOf(c)<0)chips.push(c);});});
-      return '<article class="cx-exp"><div class="cx-exp-hd"><div class="av">'+(D.icons[k]||'🤖')+'</div><div>'+
-        '<h3>'+esc(D.names[k])+'<span class="st'+(isSoon?' soon':'')+'">'+(isSoon?esc(eta||'開發中'):'已上線')+'</span></h3>'+
-        '<p class="one">'+esc(G.one)+'</p>'+
-        '<div class="for">'+gs.map(function(g){return '<span>對應需求：'+esc(g.title)+'</span>';}).join('')+chips.map(function(c){return '<span>'+esc(c)+'</span>';}).join('')+'</div>'+
-        '</div></div><div class="cx-exp-bd">'+
-        (G.main?'<div><b>主要能力</b>'+esc(G.main)+'</div>':'')+
-        (G.secondary?'<div><b>也可以協助</b>'+esc(G.secondary)+'</div>':'')+
-        (G.loopText?'<div class="loop"><b>處理範圍'+(G.loop?'<span class="lp'+(G.loopClass==='ready'?' ready':'')+'">'+esc(G.loop)+'</span>':'')+'</b>'+esc(G.loopText)+'</div>':'')+
-        (G.boundary?'<div><b>能力邊界與前提</b>'+esc(G.boundary)+'</div>':'')+
-        (G.detail?'<div class="wide"><b>可以帶來什麼</b>'+esc(G.detail)+'</div>':'')+
-        '</div></article>';
-    }).join('');
-  }
-  gBox.addEventListener('click',function(e){
-    var b=e.target.closest('.cx-goal'); if(!b) return;
-    var id=b.getAttribute('data-g'), i=sel.indexOf(id);
-    if(i>=0) sel.splice(i,1); else sel.push(id);
-    renderGoals(); renderExperts();
-  });
-  renderGoals(); renderExperts();
 })();
 </script>
 </body>
