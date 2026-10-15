@@ -865,6 +865,7 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
 @keyframes as2in{from{opacity:0;transform:translateY(8px)}}
 .as2-replay{align-self:flex-start;margin-top:4px;border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
 @media(max-width:680px){.as2-box{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.as2-side{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:10px}.as2-side h3{width:100%;margin-bottom:2px}.as2-side button{padding:6px 10px;font-size:13px}}
+.agent-platform.cx-plat{margin:0 0 22px;box-shadow:var(--shadow)}
 </style>
 </head>
 <body>
@@ -931,18 +932,6 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
       </article>
     </div>
 
-    <div class="agent-platform">
-      <div class="agent-platform-hd"><div><h3>Agent Space 是專家背後的共通平台</h3><p>讓 AI 不只回答問題，還能記住工作脈絡、連接企業知識、主動執行任務，同時由企業控管資料、權限與使用成本。</p></div><span class="plat-tag">PLATFORM CAPABILITIES</span></div>
-      <div class="agent-platform-grid">
-        <div class="agent-platform-item"><div class="pi">🧠</div><b>記憶與逐步學習</b><p>累積常用問法、偏好與工作脈絡，讓後續協作更貼近企業使用方式。</p></div>
-        <div class="agent-platform-item"><div class="pi">🏢</div><b>企業知識／資料庫</b><p>整合 SOP、文件、案件與企業資料，形成專家可依權限調用的知識空間。</p></div>
-        <div class="agent-platform-item"><div class="pi">🔔</div><b>主動任務與多通路通知</b><p>支援定期任務、郵件監控、待辦，以及 Email／LINE／Telegram 等推播。</p></div>
-        <div class="agent-platform-item"><div class="pi">🤖</div><b>多模型選擇</b><p>可依任務難度、速度與成本選用不同 AI 模型。</p><div class="model-tags"><span>GPT</span><span>Claude</span><span>Gemini</span></div></div>
-        <div class="agent-platform-item security"><div class="pi">🔐</div><b>隱私、權限與稽核</b><p>敏感資料可先脫敏／攔截；傳輸採 TLS，搭配 IAM、Agent、資料授權與租戶隔離，操作可留存稽核軌跡。</p></div>
-        <div class="agent-platform-item points"><div class="pi">🪙</div><b>AI 點數與配額管理</b><p>AI 使用統一以點數計量；公司共用點數池，可限制組織／使用者日月額度，餘額不足前可告警。</p></div>
-      </div>
-      <div class="agent-platform-note">資料本體與企業知識以客戶端平台為主；雲端模型依企業方案使用加密傳輸。點數消耗會依輸入／輸出與流程複雜度而不同。</div>
-    </div>
   </section>
   
 
@@ -960,13 +949,13 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
           <path class="rail" d="M0 55 C70 20 130 20 200 55"/><path class="flow out" d="M0 55 C70 20 130 20 200 55"/>
           <path class="rail" d="M200 95 C130 130 70 130 0 95"/><path class="flow back" d="M200 95 C130 130 70 130 0 95"/>
           <circle class="dot" r="5" fill="#0086C9" color="#0086C9"><animateMotion dur="2.2s" repeatCount="indefinite" path="M0 55 C70 20 130 20 200 55"/></circle>
-          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M200 95 C130 130 70 130 0 95"/></circle>
+          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="2.2s" begin="-1.1s" repeatCount="indefinite" path="M200 95 C130 130 70 130 0 95"/></circle>
         </svg>
         <svg class="vbeam" viewBox="0 0 200 110" preserveAspectRatio="none">
           <path class="rail" d="M75 0 L75 110"/><path class="flow out" d="M75 0 L75 110"/>
           <path class="rail" d="M125 110 L125 0"/><path class="flow back" d="M125 110 L125 0"/>
           <circle class="dot" r="5" fill="#0086C9" color="#0086C9"><animateMotion dur="1.8s" repeatCount="indefinite" path="M75 0 L75 110"/></circle>
-          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="1.8s" begin=".9s" repeatCount="indefinite" path="M125 110 L125 0"/></circle>
+          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="1.8s" begin="-0.9s" repeatCount="indefinite" path="M125 110 L125 0"/></circle>
         </svg>
         <span class="lbl t">提出目標 <i class="ah">→</i><i class="av">↓</i></span><span class="lbl b"><i class="ah">←</i><i class="av">↑</i> 回傳結果</span>
       </div>
@@ -977,6 +966,20 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
     </div>
     <div class="step" id="as2Step"><span>① 提出目標</span><span class="co">② Agent 判斷</span><span class="co">③ 工作流執行</span><span class="co">④ 申請企業數據</span><span>⑤ 回傳結果</span></div>
   </section>
+
+
+  <div class="agent-platform cx-plat">
+      <div class="agent-platform-hd"><div><h3>Agent Space 是專家背後的共通平台</h3><p>讓 AI 不只回答問題，還能記住工作脈絡、連接企業知識、主動執行任務，同時由企業控管資料、權限與使用成本。</p></div><span class="plat-tag">PLATFORM CAPABILITIES</span></div>
+      <div class="agent-platform-grid">
+        <div class="agent-platform-item"><div class="pi">🧠</div><b>記憶與逐步學習</b><p>累積常用問法、偏好與工作脈絡，讓後續協作更貼近企業使用方式。</p></div>
+        <div class="agent-platform-item"><div class="pi">🏢</div><b>企業知識／資料庫</b><p>整合 SOP、文件、案件與企業資料，形成專家可依權限調用的知識空間。</p></div>
+        <div class="agent-platform-item"><div class="pi">🔔</div><b>主動任務與多通路通知</b><p>支援定期任務、郵件監控、待辦，以及 Email／LINE／Telegram 等推播。</p></div>
+        <div class="agent-platform-item"><div class="pi">🤖</div><b>多模型選擇</b><p>可依任務難度、速度與成本選用不同 AI 模型。</p><div class="model-tags"><span>GPT</span><span>Claude</span><span>Gemini</span></div></div>
+        <div class="agent-platform-item security"><div class="pi">🔐</div><b>隱私、權限與稽核</b><p>敏感資料可先脫敏／攔截；傳輸採 TLS，搭配 IAM、Agent、資料授權與租戶隔離，操作可留存稽核軌跡。</p></div>
+        <div class="agent-platform-item points"><div class="pi">🪙</div><b>AI 點數與配額管理</b><p>AI 使用統一以點數計量；公司共用點數池，可限制組織／使用者日月額度，餘額不足前可告警。</p></div>
+      </div>
+      <div class="agent-platform-note">資料本體與企業知識以客戶端平台為主；雲端模型依企業方案使用加密傳輸。點數消耗會依輸入／輸出與流程複雜度而不同。</div>
+    </div>
 
   <div class="as2-mask noprint" id="as2Mask" hidden>
     <div class="as2-box" role="dialog" aria-modal="true" aria-labelledby="as2Title">
