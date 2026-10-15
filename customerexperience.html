@@ -803,58 +803,68 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
 @media(max-width:900px){.cx-goals{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.cx-goals{grid-template-columns:1fr}.cx-exp-bd{grid-template-columns:1fr}}
 
-/* ===== 2026-10-15：Agent Space 公司區／個人區介紹（來源：AI agent 輔導說明 2026.10.08）===== */
-.cx-as .vs{display:grid;grid-template-columns:1fr auto 1.35fr;gap:14px;align-items:stretch;margin:4px 0 18px}
-.cx-as .vs-a{border:1px solid var(--line);border-radius:12px;background:var(--surface-2);padding:14px 16px}
-.cx-as .vs-a b{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
-.cx-as .vs-a p{font-size:15px;font-weight:700;line-height:1.7;color:var(--ink);margin:0}
-.cx-as .vs-a small{display:block;margin-top:8px;font-size:12.5px;color:var(--faint)}
-.cx-as .vs-arr{display:grid;place-items:center;color:var(--accent);font-size:22px;font-weight:700}
-.cx-as .vs-b{border-radius:12px;background:linear-gradient(135deg,#0B2D57,#0A4C86);color:#fff;padding:14px 16px}
-.cx-as .vs-b b{display:block;font-size:13px;color:#9FD8FF;margin-bottom:8px}
-.cx-as .vs-b ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
-.cx-as .vs-b li{font-size:13.5px;line-height:1.5}
-.cx-as .vs-b li strong{display:block;font-size:14.5px}
-.cx-as .vs-b li span{color:#C9E6FA}
-.cx-as .tag{margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--accent-soft);border:1px solid var(--accent-line);font-size:14.5px;font-weight:700;color:var(--ink);text-align:center}
-.cx-as .zones{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.cx-as .zone{border:1.5px solid var(--accent-line);border-radius:14px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column}
-.cx-as .zone-hd{padding:14px 16px;border-bottom:1px solid var(--line-soft);display:flex;gap:12px;align-items:flex-start}
-.cx-as .zone-hd .ic{flex:none;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:21px;background:var(--accent-soft);border:1px solid var(--accent-line)}
-.cx-as .zone-hd h3{margin:0;font-size:17.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.cx-as .zone-hd h3 em{font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--accent);background:#fff;border:1px solid var(--accent-line);border-radius:999px;padding:1px 9px}
-.cx-as .zone-hd p{margin:4px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
-.cx-as .zone.co{border-color:#2B5C8C}
-.cx-as .zone.co .zone-hd{background:linear-gradient(135deg,#EEF4FA,#fff)}
-.cx-as .zone.me .zone-hd{background:linear-gradient(135deg,var(--accent-soft),#fff)}
-.cx-as .zone-bd{padding:12px 16px 16px;display:flex;flex-direction:column;gap:12px;flex:1}
-.cx-as .grp b{display:block;font-size:12.5px;letter-spacing:.04em;color:var(--accent);margin-bottom:6px}
-.cx-as .zone.co .grp b{color:#2B5C8C}
-.cx-as .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
-.cx-as .it{border:1px solid var(--line-soft);border-radius:9px;background:var(--surface-2);padding:9px 11px}
-.cx-as .it strong{display:block;font-size:14px;color:var(--ink)}
-.cx-as .it span{display:block;font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:2px}
-.cx-as .it q{display:block;margin-top:6px;font-size:12.5px;color:var(--ink);quotes:"「" "」";line-height:1.55}
-.cx-as .gov{display:flex;flex-wrap:wrap;gap:6px}
-.cx-as .gov span{font-size:12.5px;font-weight:700;color:#2B5C8C;background:#EEF4FA;border:1px solid #C3D6EA;border-radius:999px;padding:3px 10px}
-.cx-as .rings{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
-.cx-as .rings li{font-size:13px;line-height:1.6;color:var(--muted);padding-left:12px;border-left:3px solid #C3D6EA}
-.cx-as .rings li strong{color:var(--ink)}
-.cx-as .flow{margin-top:18px;border:1px dashed var(--accent-line);border-radius:12px;padding:14px 16px;background:#FBFDFF}
-.cx-as .flow h4{margin:0 0 10px;font-size:15px;color:var(--ink)}
-.cx-as .flow ol{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
-.cx-as .flow li{flex:1 1 150px;border-radius:10px;padding:9px 11px;font-size:13px;line-height:1.5;color:var(--muted);background:#fff;border:1px solid var(--line)}
-.cx-as .flow li strong{display:block;font-size:13.5px;color:var(--ink)}
-.cx-as .flow li .z{display:inline-block;margin-top:5px;font-size:11px;font-weight:700;border-radius:999px;padding:0 8px}
-.cx-as .flow li .z.me{color:var(--accent);background:var(--accent-soft)}
-.cx-as .flow li .z.co{color:#2B5C8C;background:#EEF4FA}
-.cx-as .path{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px}
-.cx-as .path b{margin-right:4px;color:var(--ink)}
-.cx-as .path span{padding:5px 12px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line);font-weight:700;color:var(--muted)}
-.cx-as .path span:last-child{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
-.cx-as .path i{font-style:normal;color:var(--faint)}
-@media(max-width:860px){.cx-as .vs{grid-template-columns:1fr}.cx-as .vs-arr{transform:rotate(90deg)}.cx-as .zones{grid-template-columns:1fr}}
-@media(max-width:520px){.cx-as .vs-b ol{grid-template-columns:1fr}}
+/* ===== 2026-10-15 v2：Agent Space 個人區 × 公司區（流動光束＋點擊體驗）===== */
+.cx-as2 .stage{position:relative;display:grid;grid-template-columns:1fr minmax(120px,1.1fr) 1fr;align-items:center;gap:0;margin-top:10px;padding:18px;border:1px solid var(--accent-line);border-radius:16px;background:radial-gradient(70% 90% at 50% 50%,#EAF6FD,#fff 75%)}
+.cx-as2 .zc{position:relative;z-index:2;text-align:left;cursor:pointer;border:1.5px solid var(--accent-line);border-radius:14px;background:#fff;padding:16px 16px 14px;display:flex;flex-direction:column;gap:6px;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.cx-as2 .zc:hover,.cx-as2 .zc:focus-visible{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 14px 30px -16px rgba(0,134,201,.6);outline:none}
+.cx-as2 .zc.co{border-color:#9DB9D6}
+.cx-as2 .zc.co:hover,.cx-as2 .zc.co:focus-visible{border-color:#2B5C8C;box-shadow:0 14px 30px -16px rgba(43,92,140,.6)}
+.cx-as2 .zc .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:23px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.cx-as2 .zc.co .ic{background:#EEF4FA;border-color:#C3D6EA}
+.cx-as2 .zc h3{margin:4px 0 0;font-size:20px}
+.cx-as2 .zc em{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent)}
+.cx-as2 .zc.co em{color:#2B5C8C}
+.cx-as2 .zc p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.6}
+.cx-as2 .zc .go{margin-top:6px;align-self:flex-start;font-size:13.5px;font-weight:700;color:#fff;background:var(--accent);border-radius:8px;padding:6px 12px}
+.cx-as2 .zc.co .go{background:#2B5C8C}
+.cx-as2 .beam{position:relative;height:150px;z-index:1}
+.cx-as2 .beam svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cx-as2 .beam .rail{fill:none;stroke:#D6E6F3;stroke-width:3}
+.cx-as2 .beam .flow{fill:none;stroke-width:3;stroke-linecap:round;stroke-dasharray:10 14;animation:as2dash 1.1s linear infinite}
+.cx-as2 .beam .flow.out{stroke:#0086C9}
+.cx-as2 .beam .flow.back{stroke:#F0A030;animation-direction:reverse}
+@keyframes as2dash{to{stroke-dashoffset:-24}}
+.cx-as2 .beam .dot{filter:drop-shadow(0 0 6px currentColor)}
+.cx-as2 .beam .lbl{position:absolute;left:50%;transform:translateX(-50%);font-size:12px;font-weight:700;white-space:nowrap;padding:2px 10px;border-radius:999px;background:#fff}
+.cx-as2 .beam .lbl.t{top:4px;color:#0086C9;border:1px solid var(--accent-line)}
+.cx-as2 .beam .lbl.b{bottom:4px;color:#B86E00;border:1px solid #F3D29C}
+.cx-as2 .step{margin-top:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.cx-as2 .step span{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:#fff;transition:all .3s}
+.cx-as2 .step span.on{color:#fff;background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,134,201,.15)}
+.cx-as2 .step span.on.co{background:#2B5C8C;border-color:#2B5C8C}
+.cx-as2 .vbeam{display:none}
+.cx-as2 .lbl i{font-style:normal}.cx-as2 .lbl .av{display:none}
+@media(max-width:760px){
+  .cx-as2 .stage{grid-template-columns:1fr;padding:14px}
+  .cx-as2 .beam{height:110px}
+  .cx-as2 .beam .hz{display:none}.cx-as2 .vbeam{display:block}.cx-as2 .lbl .ah{display:none}.cx-as2 .lbl .av{display:inline}
+  .cx-as2 .beam .lbl.t{top:auto;bottom:auto;left:6px;top:50%;transform:translateY(-50%)}
+  .cx-as2 .beam .lbl.b{left:auto;right:6px;bottom:auto;top:50%;transform:translateY(-50%)}
+}
+@media(prefers-reduced-motion:reduce){.cx-as2 .beam .flow{animation:none}.cx-as2 .beam .dot{display:none}}
+/* 體驗視窗 */
+.as2-mask{position:fixed;inset:0;z-index:420;background:rgba(12,38,69,.46);display:flex;align-items:center;justify-content:center;padding:16px}
+.as2-mask[hidden]{display:none!important}
+.as2-box{width:min(880px,100%);max-height:92vh;background:#fff;border-radius:16px;box-shadow:0 28px 80px -28px rgba(12,38,69,.55);display:grid;grid-template-columns:230px minmax(0,1fr);overflow:hidden}
+.as2-side{background:var(--surface-2);border-right:1px solid var(--line);padding:16px 12px;display:flex;flex-direction:column;gap:6px;overflow:auto}
+.as2-side h3{margin:0 4px 8px;font-size:17px;display:flex;align-items:center;gap:8px}
+.as2-side button{text-align:left;border:1px solid transparent;background:transparent;border-radius:9px;padding:9px 10px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer}
+.as2-side button:hover{background:#fff;border-color:var(--line)}
+.as2-side button.on{background:#fff;border-color:var(--accent);color:var(--accent);font-weight:700}
+.as2-box.co .as2-side button.on{border-color:#2B5C8C;color:#2B5C8C}
+.as2-main{display:flex;flex-direction:column;min-height:0}
+.as2-top{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.as2-top b{font-size:15.5px}
+.as2-top .x{margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:13.5px}
+.as2-desc{padding:12px 16px 0;font-size:14px;color:var(--muted);line-height:1.6}
+.as2-chat{flex:1;overflow:auto;padding:14px 16px 18px;display:flex;flex-direction:column;gap:10px;min-height:260px}
+.as2-msg{max-width:88%;font-size:14px;line-height:1.6;padding:9px 12px;border-radius:12px;animation:as2in .35s ease-out backwards}
+.as2-msg.u{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:3px}
+.as2-msg.a{align-self:flex-start;background:var(--surface-2);border:1px solid var(--line);border-bottom-left-radius:3px}
+.as2-msg.s{align-self:center;font-size:12.5px;color:var(--muted);background:#fff;border:1px dashed var(--line);font-family:var(--mono)}
+@keyframes as2in{from{opacity:0;transform:translateY(8px)}}
+.as2-replay{align-self:flex-start;margin-top:4px;border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+@media(max-width:680px){.as2-box{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.as2-side{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:10px}.as2-side h3{width:100%;margin-bottom:2px}.as2-side button{padding:6px 10px;font-size:13px}}
 </style>
 </head>
 <body>
@@ -936,97 +946,94 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
   </section>
   
 
-  <!-- ===== 2026-10-15：認識 Agent Space 公司區／個人區 ===== -->
-  <section class="cx-block cx-as" id="cxAgentSpace">
-    <h2>認識 Agent Space：公司區 × 個人區</h2>
-    <div class="sub">資安數智專家都運作在 Agent Space 上。它分成兩個區：<b>公司區</b>（Server 企業空間）負責連接企業資料、執行流程與統一治理；<b>個人區</b>（Edge 個人空間）是每位同仁自己的 AI 工作入口與數位分身。</div>
-
-    <div class="vs">
-      <div class="vs-a"><b>一般生成式 AI</b><p>回答問題<br>生成內容<br>提供建議</p><small>人仍需自行完成後續工作</small></div>
-      <div class="vs-arr" aria-hidden="true">→</div>
-      <div class="vs-b"><b>Agent Space 數位助理（經企業安全閘道）</b>
-        <ol>
-          <li><strong>01 理解使用者</strong><span>角色、習慣與工作脈絡</span></li>
-          <li><strong>02 遵守企業規則</strong><span>資料來源、權限與指定格式</span></li>
-          <li><strong>03 調用工具與 ERP</strong><span>查詢、分析並持續執行</span></li>
-          <li><strong>04 推進工作閉環</strong><span>產出成果、交辦、確認與留痕</span></li>
-        </ol>
+  <!-- ===== 2026-10-15 v2：Agent Space 個人區 × 公司區 ===== -->
+  <section class="cx-block cx-as2" id="cxAgentSpace">
+    <h2>Agent Space：個人區 × 公司區</h2>
+    <div class="sub">用戶只要給目標，Agent 就在兩區之間完成中間工作。點選任一區，體驗它能做什麼。</div>
+    <div class="stage">
+      <button type="button" class="zc me" data-as2="me">
+        <span class="ic">👤</span><em>EDGE · 個人空間</em><h3>個人區</h3>
+        <p>每位同仁的 AI 工作台與「我的分身」</p><span class="go">點我體驗 →</span>
+      </button>
+      <div class="beam" aria-hidden="true">
+        <svg class="hz" viewBox="0 0 200 150" preserveAspectRatio="none">
+          <path class="rail" d="M0 55 C70 20 130 20 200 55"/><path class="flow out" d="M0 55 C70 20 130 20 200 55"/>
+          <path class="rail" d="M200 95 C130 130 70 130 0 95"/><path class="flow back" d="M200 95 C130 130 70 130 0 95"/>
+          <circle class="dot" r="5" fill="#0086C9" color="#0086C9"><animateMotion dur="2.2s" repeatCount="indefinite" path="M0 55 C70 20 130 20 200 55"/></circle>
+          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M200 95 C130 130 70 130 0 95"/></circle>
+        </svg>
+        <svg class="vbeam" viewBox="0 0 200 110" preserveAspectRatio="none">
+          <path class="rail" d="M75 0 L75 110"/><path class="flow out" d="M75 0 L75 110"/>
+          <path class="rail" d="M125 110 L125 0"/><path class="flow back" d="M125 110 L125 0"/>
+          <circle class="dot" r="5" fill="#0086C9" color="#0086C9"><animateMotion dur="1.8s" repeatCount="indefinite" path="M75 0 L75 110"/></circle>
+          <circle class="dot" r="5" fill="#F0A030" color="#F0A030"><animateMotion dur="1.8s" begin=".9s" repeatCount="indefinite" path="M125 110 L125 0"/></circle>
+        </svg>
+        <span class="lbl t">提出目標 <i class="ah">→</i><i class="av">↓</i></span><span class="lbl b"><i class="ah">←</i><i class="av">↑</i> 回傳結果</span>
       </div>
+      <button type="button" class="zc co" data-as2="co">
+        <span class="ic">🏢</span><em>SERVER · 企業空間</em><h3>公司區</h3>
+        <p>連接 ERP 與企業資料、執行流程與統一治理</p><span class="go">點我體驗 →</span>
+      </button>
     </div>
-    <div class="tag">用戶只要給目標，Agent 負責完成中間工作，並產出結果。</div>
-
-    <div class="zones">
-      <div class="zone me">
-        <div class="zone-hd"><div class="ic">👤</div><div><h3>個人區 <em>EDGE · 個人空間</em></h3><p>每位同仁的 AI 工作台：用對話交辦工作，依角色配置專屬「我的分身」，常用做法可沉澱成自己的技能。</p></div></div>
-        <div class="zone-bd">
-          <div class="grp"><b>互動入口</b>
-            <div class="items">
-              <div class="it"><strong>💬 對話問答</strong><span>自然語言互動，理解問題並回覆；支援多輪對話與任務執行狀態追蹤。</span></div>
-              <div class="it"><strong>🪪 我的分身</strong><span>個人化入口，依使用者角色靈活啟用／停用專屬 Skill 與常用問句。</span></div>
-              <div class="it"><strong>🔔 任務與通知</strong><span>待辦追蹤、通知與協作，結果回傳後可建立待辦或發送通知。</span></div>
-            </div>
-          </div>
-          <div class="grp"><b>部門 AI 分身場景</b>
-            <div class="items">
-              <div class="it"><strong>問數 Agent</strong><span>資料庫查詢與數據分析</span><q>請幫我調出 Q3 台灣區營收報表，並分析與去年的差異。</q></div>
-              <div class="it"><strong>郵件處理 Agent</strong><span>郵件分類與草擬回應</span><q>整理這週客戶郵件，標出重要且未回覆的，並草擬回信。</q></div>
-              <div class="it"><strong>會議記錄 Agent</strong><span>逐字稿轉換、識別決議與待辦</span><q>把會議逐字稿整理出決議事項與待辦。</q></div>
-              <div class="it"><strong>ERP 串流程 Agent</strong><span>ERP 單據處理與流程串接</span><q>幫我建立一筆採購申請單，並通知主管進行線上簽核。</q></div>
-            </div>
-          </div>
-          <div class="grp"><b>技能沉澱：讓個人經驗變成企業數位資產</b>
-            <div class="items">
-              <div class="it"><strong>① 隱性經驗</strong><span>在任務中完成一次複合工作流，例如：抓缺料 → 核對訂單 → 發信。</span></div>
-              <div class="it"><strong>② AI 萃取</strong><span>對話一句話：「把剛才的步驟存成一個技能」。</span></div>
-              <div class="it"><strong>③ 我的技能</strong><span>可由 AI 微調，並重複掛載到不同分身；說一次就夠，經驗永久複製。</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="zone co">
-        <div class="zone-hd"><div class="ic">🏢</div><div><h3>公司區 <em>SERVER · 企業空間</em></h3><p>企業共用的 AI 底座：統一管理技能與流程、連結 ERP 與公司資料庫、管理所有個人區，並負責權限與治理。</p></div></div>
-        <div class="zone-bd">
-          <div class="grp"><b>Agent 執行層（理解、規劃與執行）</b>
-            <div class="items">
-              <div class="it"><strong>⚡ Skill</strong><span>提供可使用的 AI 專屬能力；能力模組化並統一發佈、持續更新迭代。</span></div>
-              <div class="it"><strong>🔀 工作流</strong><span>拆解步驟、條件判斷與流程控制。</span></div>
-              <div class="it"><strong>🧩 Plugin 工具</strong><span>呼叫 API、資料服務與外部工具。</span></div>
-            </div>
-          </div>
-          <div class="grp"><b>企業系統整合層（取得資料與執行企業動作）</b>
-            <div class="items">
-              <div class="it"><strong>🗄️ ERP／企業資料</strong><span>查詢業務資料，串接企業流程。</span></div>
-              <div class="it"><strong>🔗 整合服務</strong><span>Callback、Broker，API 與連線機制。</span></div>
-              <div class="it"><strong>✉️ 企業服務</strong><span>郵件 SMTP，通知與外部服務。</span></div>
-            </div>
-          </div>
-          <div class="grp"><b>平台治理</b>
-            <div class="gov"><span>身分驗證</span><span>權限授權</span><span>Token／配額</span><span>監控稽核</span><span>版本維運</span></div>
-          </div>
-          <div class="grp"><b>身分權限三層防護：誰可以看、誰可以用、誰可以執行</b>
-            <ul class="rings">
-              <li><strong>第一層・身分與帳號歸戶：</strong>使用者須經 OM 授權並完成歸戶管理，才能調用企業數據。</li>
-              <li><strong>第二層・角色與技能授權：</strong>個人及組織層級的存取控制受嚴格管控，未經授權無法調用。</li>
-              <li><strong>第三層・執行與查詢隔離：</strong>嚴格區分「查詢權限」與「執行權限」，每一筆企業數據的存取與操作都合規。</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flow">
-      <h4>一個需求怎麼在兩區之間走完？</h4>
-      <ol>
-        <li><strong>① 提出目標</strong>在對話或我的分身說出需求<br><span class="z me">個人區</span></li>
-        <li><strong>② Agent 判斷</strong>選用合適的 Skill<br><span class="z co">公司區</span></li>
-        <li><strong>③ 工作流執行</strong>拆解步驟、呼叫工具<br><span class="z co">公司區</span></li>
-        <li><strong>④ 申請企業數據</strong>經權限檢核取得 ERP／資料<br><span class="z co">公司區</span></li>
-        <li><strong>⑤ 回傳結果</strong>建立待辦、發送通知<br><span class="z me">個人區</span></li>
-      </ol>
-      <div class="path"><b>導入路徑</b><span>Step 1 顧問示範做</span><i>→</i><span>Step 2 顧問引導做</span><i>→</i><span>Step 3 客戶獨立做</span></div>
-    </div>
+    <div class="step" id="as2Step"><span>① 提出目標</span><span class="co">② Agent 判斷</span><span class="co">③ 工作流執行</span><span class="co">④ 申請企業數據</span><span>⑤ 回傳結果</span></div>
   </section>
+
+  <div class="as2-mask noprint" id="as2Mask" hidden>
+    <div class="as2-box" role="dialog" aria-modal="true" aria-labelledby="as2Title">
+      <aside class="as2-side" id="as2Side"></aside>
+      <div class="as2-main">
+        <div class="as2-top"><b id="as2Title"></b><button type="button" class="x" id="as2Close">✕ 關閉</button></div>
+        <div class="as2-desc" id="as2Desc"></div>
+        <div class="as2-chat" id="as2Chat" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <script id="as2-js">
+  (function(){
+    var Z={
+      me:{t:'👤 個人區',f:[
+        {n:'💬 對話問答',d:'用自然語言交辦工作，支援多輪對話與任務執行狀態追蹤。',m:[['u','幫我查詢上季度的銷售數字'],['a','好的，正在為您查詢 ERP 第三季銷售數據，請稍候…'],['s','任務：WF 數據查詢 · 進行中'],['a','第三季營收已整理完成，較上季成長 8%，需要我做成圖表嗎？']]},
+        {n:'🪪 我的分身',d:'依角色啟用／停用專屬 Skill 與常用問句，打造個人化入口。',m:[['u','我是採購，幫我設定分身'],['a','已為您啟用：ERP 串流程、郵件處理、問數 Agent，並加入常用問句「本週缺料清單」。']]},
+        {n:'🧑‍💼 部門分身',d:'問數、郵件處理、會議記錄、ERP 串流程，各部門都有專屬分身。',m:[['u','整理這週客戶郵件，標出重要且未回覆的'],['a','共 46 封，重要未回覆 5 封，已為每封草擬回信，請確認後送出。'],['u','幫我建立一筆採購申請單並通知主管簽核'],['a','採購申請單已建立，已通知主管進行線上簽核。']]},
+        {n:'💎 技能沉澱',d:'把一次做過的流程存成技能，說一次就夠，經驗永久複製。',m:[['u','抓缺料 → 核對訂單 → 發信，剛剛完成了'],['u','把剛才的步驟存成一個技能'],['a','已建立技能「缺料核對通知」，可掛載到其他同仁的分身上。']]},
+        {n:'🔔 任務與通知',d:'結果回傳後自動建立待辦、追蹤進度並發送通知。',m:[['s','公司區回傳結果'],['a','已建立待辦「確認 3 筆缺料」，截止明天 17:00，並通知相關同仁。']]}
+      ]},
+      co:{t:'🏢 公司區',f:[
+        {n:'⚡ Skill／工作流',d:'Agent 判斷該用哪個 Skill，工作流拆解步驟、條件判斷與流程控制。',m:[['s','收到目標：查詢上季銷售'],['a','判斷能力 → 選用「問數 Agent」'],['a','工作流：取數 → 彙總 → 比對去年 → 產出報表']]},
+        {n:'🗄️ ERP 與企業資料',d:'查詢業務資料、串接企業流程，資料留在企業端。',m:[['s','申請企業數據：ERP 銷售模組'],['a','權限檢核通過，已取得 Q3 銷售資料 1,284 筆。']]},
+        {n:'🔗 整合服務',d:'透過 Callback、Broker、API 與 Plugin 串接內外部系統，並以郵件 SMTP 發送通知。',m:[['a','呼叫採購 API 建立申請單 → 成功'],['a','透過 SMTP 寄送簽核通知給主管 → 已送達']]},
+        {n:'🔐 身分權限三層防護',d:'控制誰可以看、誰可以用、誰可以執行。',m:[['s','第一層：OM 授權與帳號歸戶 ✓'],['s','第二層：角色與技能授權 ✓'],['s','第三層：查詢／執行權限隔離 ✓'],['a','此帳號僅有「查詢權限」，建立單據需主管核准。']]},
+        {n:'🛡️ 平台治理',d:'身分驗證、權限授權、Token／配額、監控稽核、版本維運，統一管理。',m:[['a','本月 AI 點數已使用 62%，研發部接近日額度上限，已發送提醒。'],['a','所有操作皆留存稽核軌跡，可依人員與時間查詢。']]}
+      ]}
+    };
+    var mask=document.getElementById('as2Mask'),box=mask.querySelector('.as2-box'),side=document.getElementById('as2Side'),chat=document.getElementById('as2Chat'),cur,timers=[];
+    function clear(){timers.forEach(clearTimeout);timers=[];}
+    function play(i){
+      clear();var f=Z[cur].f[i];
+      side.querySelectorAll('button').forEach(function(b,k){b.classList.toggle('on',k===i);});
+      document.getElementById('as2Desc').textContent=f.d;chat.innerHTML='';
+      f.m.forEach(function(m,k){timers.push(setTimeout(function(){var d=document.createElement('div');d.className='as2-msg '+m[0];d.textContent=m[1];chat.appendChild(d);chat.scrollTop=chat.scrollHeight;},k*700));});
+      timers.push(setTimeout(function(){var b=document.createElement('button');b.type='button';b.className='as2-replay';b.textContent='↻ 再看一次';b.onclick=function(){play(i);};chat.appendChild(b);},f.m.length*700));
+    }
+    function open(z){
+      cur=z;box.classList.toggle('co',z==='co');
+      side.innerHTML='<h3>'+Z[z].t+'</h3>'+Z[z].f.map(function(f,i){return '<button type="button" data-i="'+i+'">'+f.n+'</button>';}).join('');
+      document.getElementById('as2Title').textContent=Z[z].t+' · 功能體驗';
+      mask.hidden=false;document.body.style.overflow='hidden';play(0);
+      side.querySelector('button').focus();
+    }
+    function close(){clear();mask.hidden=true;document.body.style.overflow='';}
+    side.addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(b)play(+b.dataset.i);});
+    document.querySelectorAll('[data-as2]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.as2);});});
+    document.getElementById('as2Close').onclick=close;
+    mask.addEventListener('click',function(e){if(e.target===mask)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mask.hidden)close();});
+    var st=document.querySelectorAll('#as2Step span'),k=0;
+    if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+      setInterval(function(){st.forEach(function(s,j){s.classList.toggle('on',j===k);});k=(k+1)%st.length;},1300);
+    }
+  })();
+  </script>
 
   <section class="cx-block cx-arch" id="cxArch">
     <h2>整體協作架構</h2>
