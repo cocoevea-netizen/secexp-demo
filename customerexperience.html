@@ -802,6 +802,59 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
 .cx-combo{margin-top:16px}
 @media(max-width:900px){.cx-goals{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.cx-goals{grid-template-columns:1fr}.cx-exp-bd{grid-template-columns:1fr}}
+
+/* ===== 2026-10-15：Agent Space 公司區／個人區介紹（來源：AI agent 輔導說明 2026.10.08）===== */
+.cx-as .vs{display:grid;grid-template-columns:1fr auto 1.35fr;gap:14px;align-items:stretch;margin:4px 0 18px}
+.cx-as .vs-a{border:1px solid var(--line);border-radius:12px;background:var(--surface-2);padding:14px 16px}
+.cx-as .vs-a b{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.cx-as .vs-a p{font-size:15px;font-weight:700;line-height:1.7;color:var(--ink);margin:0}
+.cx-as .vs-a small{display:block;margin-top:8px;font-size:12.5px;color:var(--faint)}
+.cx-as .vs-arr{display:grid;place-items:center;color:var(--accent);font-size:22px;font-weight:700}
+.cx-as .vs-b{border-radius:12px;background:linear-gradient(135deg,#0B2D57,#0A4C86);color:#fff;padding:14px 16px}
+.cx-as .vs-b b{display:block;font-size:13px;color:#9FD8FF;margin-bottom:8px}
+.cx-as .vs-b ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
+.cx-as .vs-b li{font-size:13.5px;line-height:1.5}
+.cx-as .vs-b li strong{display:block;font-size:14.5px}
+.cx-as .vs-b li span{color:#C9E6FA}
+.cx-as .tag{margin:0 0 18px;padding:10px 14px;border-radius:10px;background:var(--accent-soft);border:1px solid var(--accent-line);font-size:14.5px;font-weight:700;color:var(--ink);text-align:center}
+.cx-as .zones{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cx-as .zone{border:1.5px solid var(--accent-line);border-radius:14px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column}
+.cx-as .zone-hd{padding:14px 16px;border-bottom:1px solid var(--line-soft);display:flex;gap:12px;align-items:flex-start}
+.cx-as .zone-hd .ic{flex:none;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:21px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.cx-as .zone-hd h3{margin:0;font-size:17.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cx-as .zone-hd h3 em{font-style:normal;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--accent);background:#fff;border:1px solid var(--accent-line);border-radius:999px;padding:1px 9px}
+.cx-as .zone-hd p{margin:4px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+.cx-as .zone.co{border-color:#2B5C8C}
+.cx-as .zone.co .zone-hd{background:linear-gradient(135deg,#EEF4FA,#fff)}
+.cx-as .zone.me .zone-hd{background:linear-gradient(135deg,var(--accent-soft),#fff)}
+.cx-as .zone-bd{padding:12px 16px 16px;display:flex;flex-direction:column;gap:12px;flex:1}
+.cx-as .grp b{display:block;font-size:12.5px;letter-spacing:.04em;color:var(--accent);margin-bottom:6px}
+.cx-as .zone.co .grp b{color:#2B5C8C}
+.cx-as .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.cx-as .it{border:1px solid var(--line-soft);border-radius:9px;background:var(--surface-2);padding:9px 11px}
+.cx-as .it strong{display:block;font-size:14px;color:var(--ink)}
+.cx-as .it span{display:block;font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:2px}
+.cx-as .it q{display:block;margin-top:6px;font-size:12.5px;color:var(--ink);quotes:"「" "」";line-height:1.55}
+.cx-as .gov{display:flex;flex-wrap:wrap;gap:6px}
+.cx-as .gov span{font-size:12.5px;font-weight:700;color:#2B5C8C;background:#EEF4FA;border:1px solid #C3D6EA;border-radius:999px;padding:3px 10px}
+.cx-as .rings{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.cx-as .rings li{font-size:13px;line-height:1.6;color:var(--muted);padding-left:12px;border-left:3px solid #C3D6EA}
+.cx-as .rings li strong{color:var(--ink)}
+.cx-as .flow{margin-top:18px;border:1px dashed var(--accent-line);border-radius:12px;padding:14px 16px;background:#FBFDFF}
+.cx-as .flow h4{margin:0 0 10px;font-size:15px;color:var(--ink)}
+.cx-as .flow ol{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.cx-as .flow li{flex:1 1 150px;border-radius:10px;padding:9px 11px;font-size:13px;line-height:1.5;color:var(--muted);background:#fff;border:1px solid var(--line)}
+.cx-as .flow li strong{display:block;font-size:13.5px;color:var(--ink)}
+.cx-as .flow li .z{display:inline-block;margin-top:5px;font-size:11px;font-weight:700;border-radius:999px;padding:0 8px}
+.cx-as .flow li .z.me{color:var(--accent);background:var(--accent-soft)}
+.cx-as .flow li .z.co{color:#2B5C8C;background:#EEF4FA}
+.cx-as .path{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px}
+.cx-as .path b{margin-right:4px;color:var(--ink)}
+.cx-as .path span{padding:5px 12px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line);font-weight:700;color:var(--muted)}
+.cx-as .path span:last-child{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
+.cx-as .path i{font-style:normal;color:var(--faint)}
+@media(max-width:860px){.cx-as .vs{grid-template-columns:1fr}.cx-as .vs-arr{transform:rotate(90deg)}.cx-as .zones{grid-template-columns:1fr}}
+@media(max-width:520px){.cx-as .vs-b ol{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -882,6 +935,98 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
     </div>
   </section>
   
+
+  <!-- ===== 2026-10-15：認識 Agent Space 公司區／個人區 ===== -->
+  <section class="cx-block cx-as" id="cxAgentSpace">
+    <h2>認識 Agent Space：公司區 × 個人區</h2>
+    <div class="sub">資安數智專家都運作在 Agent Space 上。它分成兩個區：<b>公司區</b>（Server 企業空間）負責連接企業資料、執行流程與統一治理；<b>個人區</b>（Edge 個人空間）是每位同仁自己的 AI 工作入口與數位分身。</div>
+
+    <div class="vs">
+      <div class="vs-a"><b>一般生成式 AI</b><p>回答問題<br>生成內容<br>提供建議</p><small>人仍需自行完成後續工作</small></div>
+      <div class="vs-arr" aria-hidden="true">→</div>
+      <div class="vs-b"><b>Agent Space 數位助理（經企業安全閘道）</b>
+        <ol>
+          <li><strong>01 理解使用者</strong><span>角色、習慣與工作脈絡</span></li>
+          <li><strong>02 遵守企業規則</strong><span>資料來源、權限與指定格式</span></li>
+          <li><strong>03 調用工具與 ERP</strong><span>查詢、分析並持續執行</span></li>
+          <li><strong>04 推進工作閉環</strong><span>產出成果、交辦、確認與留痕</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="tag">用戶只要給目標，Agent 負責完成中間工作，並產出結果。</div>
+
+    <div class="zones">
+      <div class="zone me">
+        <div class="zone-hd"><div class="ic">👤</div><div><h3>個人區 <em>EDGE · 個人空間</em></h3><p>每位同仁的 AI 工作台：用對話交辦工作，依角色配置專屬「我的分身」，常用做法可沉澱成自己的技能。</p></div></div>
+        <div class="zone-bd">
+          <div class="grp"><b>互動入口</b>
+            <div class="items">
+              <div class="it"><strong>💬 對話問答</strong><span>自然語言互動，理解問題並回覆；支援多輪對話與任務執行狀態追蹤。</span></div>
+              <div class="it"><strong>🪪 我的分身</strong><span>個人化入口，依使用者角色靈活啟用／停用專屬 Skill 與常用問句。</span></div>
+              <div class="it"><strong>🔔 任務與通知</strong><span>待辦追蹤、通知與協作，結果回傳後可建立待辦或發送通知。</span></div>
+            </div>
+          </div>
+          <div class="grp"><b>部門 AI 分身場景</b>
+            <div class="items">
+              <div class="it"><strong>問數 Agent</strong><span>資料庫查詢與數據分析</span><q>請幫我調出 Q3 台灣區營收報表，並分析與去年的差異。</q></div>
+              <div class="it"><strong>郵件處理 Agent</strong><span>郵件分類與草擬回應</span><q>整理這週客戶郵件，標出重要且未回覆的，並草擬回信。</q></div>
+              <div class="it"><strong>會議記錄 Agent</strong><span>逐字稿轉換、識別決議與待辦</span><q>把會議逐字稿整理出決議事項與待辦。</q></div>
+              <div class="it"><strong>ERP 串流程 Agent</strong><span>ERP 單據處理與流程串接</span><q>幫我建立一筆採購申請單，並通知主管進行線上簽核。</q></div>
+            </div>
+          </div>
+          <div class="grp"><b>技能沉澱：讓個人經驗變成企業數位資產</b>
+            <div class="items">
+              <div class="it"><strong>① 隱性經驗</strong><span>在任務中完成一次複合工作流，例如：抓缺料 → 核對訂單 → 發信。</span></div>
+              <div class="it"><strong>② AI 萃取</strong><span>對話一句話：「把剛才的步驟存成一個技能」。</span></div>
+              <div class="it"><strong>③ 我的技能</strong><span>可由 AI 微調，並重複掛載到不同分身；說一次就夠，經驗永久複製。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone co">
+        <div class="zone-hd"><div class="ic">🏢</div><div><h3>公司區 <em>SERVER · 企業空間</em></h3><p>企業共用的 AI 底座：統一管理技能與流程、連結 ERP 與公司資料庫、管理所有個人區，並負責權限與治理。</p></div></div>
+        <div class="zone-bd">
+          <div class="grp"><b>Agent 執行層（理解、規劃與執行）</b>
+            <div class="items">
+              <div class="it"><strong>⚡ Skill</strong><span>提供可使用的 AI 專屬能力；能力模組化並統一發佈、持續更新迭代。</span></div>
+              <div class="it"><strong>🔀 工作流</strong><span>拆解步驟、條件判斷與流程控制。</span></div>
+              <div class="it"><strong>🧩 Plugin 工具</strong><span>呼叫 API、資料服務與外部工具。</span></div>
+            </div>
+          </div>
+          <div class="grp"><b>企業系統整合層（取得資料與執行企業動作）</b>
+            <div class="items">
+              <div class="it"><strong>🗄️ ERP／企業資料</strong><span>查詢業務資料，串接企業流程。</span></div>
+              <div class="it"><strong>🔗 整合服務</strong><span>Callback、Broker，API 與連線機制。</span></div>
+              <div class="it"><strong>✉️ 企業服務</strong><span>郵件 SMTP，通知與外部服務。</span></div>
+            </div>
+          </div>
+          <div class="grp"><b>平台治理</b>
+            <div class="gov"><span>身分驗證</span><span>權限授權</span><span>Token／配額</span><span>監控稽核</span><span>版本維運</span></div>
+          </div>
+          <div class="grp"><b>身分權限三層防護：誰可以看、誰可以用、誰可以執行</b>
+            <ul class="rings">
+              <li><strong>第一層・身分與帳號歸戶：</strong>使用者須經 OM 授權並完成歸戶管理，才能調用企業數據。</li>
+              <li><strong>第二層・角色與技能授權：</strong>個人及組織層級的存取控制受嚴格管控，未經授權無法調用。</li>
+              <li><strong>第三層・執行與查詢隔離：</strong>嚴格區分「查詢權限」與「執行權限」，每一筆企業數據的存取與操作都合規。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow">
+      <h4>一個需求怎麼在兩區之間走完？</h4>
+      <ol>
+        <li><strong>① 提出目標</strong>在對話或我的分身說出需求<br><span class="z me">個人區</span></li>
+        <li><strong>② Agent 判斷</strong>選用合適的 Skill<br><span class="z co">公司區</span></li>
+        <li><strong>③ 工作流執行</strong>拆解步驟、呼叫工具<br><span class="z co">公司區</span></li>
+        <li><strong>④ 申請企業數據</strong>經權限檢核取得 ERP／資料<br><span class="z co">公司區</span></li>
+        <li><strong>⑤ 回傳結果</strong>建立待辦、發送通知<br><span class="z me">個人區</span></li>
+      </ol>
+      <div class="path"><b>導入路徑</b><span>Step 1 顧問示範做</span><i>→</i><span>Step 2 顧問引導做</span><i>→</i><span>Step 3 客戶獨立做</span></div>
+    </div>
+  </section>
 
   <section class="cx-block cx-arch" id="cxArch">
     <h2>整體協作架構</h2>
