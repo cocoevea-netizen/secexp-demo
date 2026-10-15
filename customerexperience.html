@@ -865,7 +865,13 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
 @keyframes as2in{from{opacity:0;transform:translateY(8px)}}
 .as2-replay{align-self:flex-start;margin-top:4px;border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
 @media(max-width:680px){.as2-box{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.as2-side{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:10px}.as2-side h3{width:100%;margin-bottom:2px}.as2-side button{padding:6px 10px;font-size:13px}}
-.agent-platform.cx-plat{margin:0 0 22px;box-shadow:var(--shadow)}
+.agent-platform.cx-plat{margin:0;box-shadow:none}
+.as2-tabs{display:flex;gap:6px;margin:10px 0 14px;border-bottom:1px solid var(--line)}
+.as2-tabs button{border:0;background:none;font:inherit;font-size:15px;font-weight:700;color:var(--muted);padding:9px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.as2-tabs button:hover{color:var(--accent)}
+.as2-tabs button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.as2-pane[hidden]{display:none!important}
+.as2-pane{animation:as2in .3s ease-out}
 </style>
 </head>
 <body>
@@ -937,7 +943,12 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
 
   <!-- ===== 2026-10-15 v2：Agent Space 個人區 × 公司區 ===== -->
   <section class="cx-block cx-as2" id="cxAgentSpace">
-    <h2>Agent Space：個人區 × 公司區</h2>
+    <h2>認識 Agent Space</h2>
+    <div class="as2-tabs" role="tablist">
+      <button type="button" role="tab" class="on" aria-selected="true" data-as2tab="as2PaneZone">個人區 × 公司區</button>
+      <button type="button" role="tab" aria-selected="false" data-as2tab="as2PanePlat">共通平台能力</button>
+    </div>
+    <div class="as2-pane" id="as2PaneZone" role="tabpanel">
     <div class="sub">用戶只要給目標，Agent 就在兩區之間完成中間工作。點選任一區，體驗它能做什麼。</div>
     <div class="stage">
       <button type="button" class="zc me" data-as2="me">
@@ -965,9 +976,8 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
       </button>
     </div>
     <div class="step" id="as2Step"><span>① 提出目標</span><span class="co">② Agent 判斷</span><span class="co">③ 工作流執行</span><span class="co">④ 申請企業數據</span><span>⑤ 回傳結果</span></div>
-  </section>
-
-
+    </div>
+    <div class="as2-pane" id="as2PanePlat" role="tabpanel" hidden>
   <div class="agent-platform cx-plat">
       <div class="agent-platform-hd"><div><h3>Agent Space 是專家背後的共通平台</h3><p>讓 AI 不只回答問題，還能記住工作脈絡、連接企業知識、主動執行任務，同時由企業控管資料、權限與使用成本。</p></div><span class="plat-tag">PLATFORM CAPABILITIES</span></div>
       <div class="agent-platform-grid">
@@ -980,6 +990,10 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
       </div>
       <div class="agent-platform-note">資料本體與企業知識以客戶端平台為主；雲端模型依企業方案使用加密傳輸。點數消耗會依輸入／輸出與流程複雜度而不同。</div>
     </div>
+    </div>
+  </section>
+
+
 
   <div class="as2-mask noprint" id="as2Mask" hidden>
     <div class="as2-box" role="dialog" aria-modal="true" aria-labelledby="as2Title">
@@ -1036,6 +1050,10 @@ header.top .cx-chip{font-size:13px;color:var(--accent);background:var(--accent-s
       setInterval(function(){st.forEach(function(s,j){s.classList.toggle('on',j===k);});k=(k+1)%st.length;},1300);
     }
   })();
+  </script>
+
+  <script id="as2-tabs-js">
+  (function(){var bs=document.querySelectorAll('[data-as2tab]');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-selected',on);document.getElementById(x.dataset.as2tab).hidden=!on;});});});})();
   </script>
 
   <section class="cx-block cx-arch" id="cxArch">
